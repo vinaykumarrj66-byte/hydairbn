@@ -3,59 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HydAirbnb | Premium Stays</title>
+    <title>HydAirbnb | Premium Stays in Hyderabad</title>
+    <!-- Reliable Icons for WhatsApp -->
+    <link rel="stylesheet" href="https://jsdelivr.net">
     <style>
-        body { font-family: sans-serif; margin:0; background:#f9f9f9; color: #222; }
-        header { background: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin:0; background:#f7f7f7; color:#222; }
+        header { background: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; position: sticky; top:0; z-index:1000; }
         .container { max-width: 1000px; margin: auto; padding: 20px; }
-        .btn-red { background: #ff385c; color: white; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; display: block; text-align: center; margin-top: 15px; }
+        .btn-red { background: #ff385c; color: white; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; display: block; text-align: center; margin-top: 15px; border: none; width: 100%; cursor: pointer; }
         .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 25px; }
-        
-        /* This creates a colored box so it NEVER looks empty */
-        .photo-placeholder { width: 100%; height: 220px; background: #ddd; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #888; font-size: 20px; }
-        
+        .card img { width: 100%; height: 280px; object-fit: cover; display: block; background: #eee; }
         .card-body { padding: 20px; }
-        
-        /* The Floating WhatsApp Button with a fallback emoji */
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 10000; text-decoration: none; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); z-index: 9999; text-decoration: none; }
     </style>
 </head>
 <body>
 
 <header>
     <h1 style="color:#ff385c; margin:0; font-size: 24px;">HydAirbnb</h1>
-    <a href="contact.html" style="background:#ff385c; color:white; padding:8px 16px; border-radius:8px; text-decoration:none; font-weight:bold;">Book Now</a>
+    <nav>
+        <a href="contact.html" style="background:#ff385c; color:white; padding:8px 16px; border-radius:8px; text-decoration:none; font-weight:bold;">Book Now</a>
+    </nav>
 </header>
 
 <div class="container">
-    <h2 style="margin: 30px 0 20px 0;">Featured Stays in Hitech City</h2>
+    <h2 style="margin: 30px 0 20px 0; text-align: center;">Available Stays in Hyderabad</h2>
     
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px;">
         
-        <!-- Property 1 -->
+        <!-- Property 1: Using your first photo -->
         <div class="card">
-            <div class="photo-placeholder">🏠 Luxury 2BHK Photo</div>
+            <img src="flat.1jpg.jfif" alt="Luxury Stay 1">
             <div class="card-body">
                 <div style="display:flex; justify-content:space-between; color:#ff385c; font-weight:bold;">
                     <span>Hitech City</span><span>★ 4.9</span>
                 </div>
-                <h3>Executive Suite - Near Mindspace</h3>
-                <p style="color:#717171; font-size:14px;">2 mins from IKEA • High Speed WiFi</p>
-                <p style="font-size:18px; font-weight:bold;">₹3,400 / night</p>
+                <h3>Premium 2BHK Executive Suite</h3>
+                <p style="color:#717171; font-size:14px;">Near IKEA & Mindspace • WiFi • AC</p>
+                <p style="font-size:20px; font-weight:bold; margin-top:10px;">₹3,400 / night</p>
                 <a href="contact.html" class="btn-red">Check Availability</a>
             </div>
         </div>
 
-        <!-- Property 2 -->
+        <!-- Property 2: Using your second photo -->
         <div class="card">
-            <div class="photo-placeholder">🏢 Modern Studio Photo</div>
+            <img src="flat.2.jpg" alt="Modern Stay 2">
             <div class="card-body">
                 <div style="display:flex; justify-content:space-between; color:#ff385c; font-weight:bold;">
                     <span>Gachibowli</span><span>★ 4.8</span>
                 </div>
-                <h3>Cosy Studio - Gachibowli</h3>
-                <p style="color:#717171; font-size:14px;">Near DLF Cyber City • Fully Furnished</p>
-                <p style="font-size:18px; font-weight:bold;">₹1,950 / night</p>
+                <h3>Modern Studio Apartment</h3>
+                <p style="color:#717171; font-size:14px;">Near DLF Cyber City • Prime Location</p>
+                <p style="font-size:20px; font-weight:bold; margin-top:10px;">₹1,950 / night</p>
                 <a href="contact.html" class="btn-red">Check Availability</a>
             </div>
         </div>
@@ -63,10 +62,14 @@
     </div>
 </div>
 
-<!-- FLOATING WHATSAPP BUTTON (Using an Emoji so it always shows) -->
+<!-- THE FLOATING WHATSAPP BUTTON -->
 <a href="https://wa.me" class="whatsapp-float" target="_blank">
-    💬
+    <i class="bi bi-whatsapp"></i>
 </a>
+
+<footer style="text-align:center; padding:40px; background:#f7f7f7; color:#717171; border-top:1px solid #ddd; margin-top: 50px;">
+    <p>© 2026 HydAirbnb | Verified Stays for Business & Families</p>
+</footer>
 
 </body>
 </html>
