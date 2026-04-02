@@ -3,107 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO: These keywords help Google find your business in Hyderabad -->
-    <title>HydAirbnb | Premium 2BHK & Studios near Hitech City & IKEA</title>
-    <meta name="description" content="Affordable luxury stays in Hyderabad. Book 2BHK and Studio apartments near Mindspace, Gachibowli and Hitech City. Best for business travelers.">
-    
-    <link rel="stylesheet" href="style.css">
+    <title>HydAirbnb | Premium Stays</title>
+    <!-- THIS LINE BELOW FIXES THE WHATSAPP LOGO -->
     <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        body { font-family: Arial, sans-serif; margin:0; background:#f9f9f9; }
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
+        header { background: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; }
+        .btn-primary { background: #ff385c; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .card img { width: 100%; height: 250px; object-fit: cover; background: #eee; }
+        .card-content { padding: 20px; }
+        /* THE FLOATING BUTTON STYLE */
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 10000; text-decoration: none; }
+    </style>
 </head>
-<body style="font-family: 'Segoe UI', Arial, sans-serif; margin:0; color:#222; background-color: #fcfcfc;">
+<body>
 
-<header style="display:flex; justify-content:space-between; align-items:center; padding:15px 30px; border-bottom: 1px solid #eee; background:white; position:sticky; top:0; z-index:1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-    <h1 style="color:#ff385c; margin:0; font-size: 26px; letter-spacing: -1px;">HydAirbnb</h1>
-    <nav>
-        <a href="index.html" style="text-decoration:none; color:black; margin-right:20px; font-weight:600;">Home</a>
-        <a href="contact.html" style="background:#ff385c; color:white; padding:10px 22px; border-radius:8px; text-decoration:none; font-weight:bold;">Book Now</a>
-    </nav>
+<header>
+    <h1 style="color:#ff385c; margin:0;">HydAirbnb</h1>
+    <nav><a href="contact.html" class="btn-primary">BOOK NOW</a></nav>
 </header>
 
-<!-- HERO SECTION: High-quality modern interior photo -->
-<div style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://unsplash.com'); background-size: cover; background-position: center; height: 550px; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 20px;">
-    <div style="max-width: 800px;">
-        <h1 style="font-size: clamp(34px, 6vw, 58px); margin-bottom: 15px; font-weight: 800; line-height: 1.1;">Premium Stays in Hitech City</h1>
-        <p style="font-size: 22px; margin-bottom: 35px; font-weight: 300;">Experience luxury 2BHKs and Studios just 5 mins from IKEA & Mindspace.</p>
-        <a href="properties.html" style="background:#ff385c; color:white; padding:18px 45px; border-radius:12px; text-decoration:none; font-weight:bold; font-size:20px; box-shadow: 0 10px 20px rgba(255,56,92,0.3); transition: 0.3s;">Explore All Stays</a>
-    </div>
-</div>
-
-<!-- TRUST SECTION: Local context for SEO -->
-<div style="max-width: 1100px; margin: auto; padding: 70px 20px;">
-    <h2 style="text-align:center; margin-bottom:15px; font-size: 34px;">Why stay with HydAirbnb?</h2>
-    <p style="text-align:center; color:#717171; margin-bottom:50px; font-size: 18px;">The preferred choice for corporate travelers and families in Hyderabad.</p>
+<div class="container">
+    <h2 style="margin: 30px 0;">Featured Stays in Hitech City</h2>
     
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; text-align: center;">
-        <div style="padding: 30px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-            <i class="fa-solid fa-hotel" style="font-size:45px; color:#ff385c; margin-bottom: 20px;"></i>
-            <h3>Verified Apartments</h3>
-            <p style="color:#717171; line-height: 1.6;">Every 2BHK and Studio is personally inspected to match Airbnb quality standards.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+        
+        <!-- Property 1 -->
+        <div class="card">
+            <img src="https://unsplash.com">
+            <div class="card-content">
+                <div style="display:flex; justify-content:space-between; color:#ff385c; font-weight:bold;">
+                    <span>Luxury 2BHK</span><span>★ 4.92</span>
+                </div>
+                <h3>Executive Suite - Near Mindspace</h3>
+                <p style="color:#717171;">2 mins from IKEA • High Speed WiFi</p>
+                <p style="font-size:18px; font-weight:bold;">₹3,400 / night</p>
+                <a href="contact.html" class="btn-primary" style="display:block; text-align:center;">Check Availability</a>
+            </div>
         </div>
-        <div style="padding: 30px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-            <i class="fa-solid fa-map-location-dot" style="font-size:45px; color:#ff385c; margin-bottom: 20px;"></i>
-            <h3>Central Locations</h3>
-            <p style="color:#717171; line-height: 1.6;">Strategically located near IKEA, Cyber Towers, and Gachibowli DLF Cyber City.</p>
+
+        <!-- Property 2 -->
+        <div class="card">
+            <img src="https://unsplash.com">
+            <div class="card-content">
+                <div style="display:flex; justify-content:space-between; color:#ff385c; font-weight:bold;">
+                    <span>Modern Studio</span><span>★ 4.88</span>
+                </div>
+                <h3>Cosy Studio - Gachibowli</h3>
+                <p style="color:#717171;">Near DLF Cyber City • Fully Furnished</p>
+                <p style="font-size:18px; font-weight:bold;">₹1,950 / night</p>
+                <a href="contact.html" class="btn-primary" style="display:block; text-align:center;">Check Availability</a>
+            </div>
         </div>
-        <div style="padding: 30px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-            <i class="fa-solid fa-shield-heart" style="font-size:45px; color:#ff385c; margin-bottom: 20px;"></i>
-            <h3>Safe for Families</h3>
-            <p style="color:#717171; line-height: 1.6;">Gated communities with 24/7 security and high-speed WiFi for work-from-home.</p>
-        </div>
+
     </div>
 </div>
 
-<!-- FEATURED STAYS WITH REAL-LOOKING PHOTOS -->
-<div style="background: #f7f7f7; padding: 80px 20px;">
-    <div style="max-width: 1100px; margin: auto;">
-        <h2 style="margin-bottom: 40px; font-size: 28px;">Featured Stays in Hitech City</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
-            
-            <!-- Property 1 -->
-            <div style="background:white; border-radius:16px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
-                <img src="https://unsplash.com" style="width:100%; height:240px; object-fit:cover;">
-                <div style="padding:20px;">
-                    <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <span style="font-weight:bold; color:#ff385c;">Luxury 2BHK</span>
-                        <span style="font-size:14px;">★ 4.92</span>
-                    </div>
-                    <h3 style="margin:10px 0 5px 0;">Executive Suite - Near Mindspace</h3>
-                    <p style="color:#717171; font-size:14px;">2 mins from IKEA • High Speed WiFi</p>
-                    <p style="font-size:18px; font-weight:bold; margin-top:15px;">₹3,400 <span style="font-weight:normal; font-size:14px;">/ night</span></p>
-                    <a href="contact.html" style="display:block; text-align:center; background:#ff385c; color:white; text-decoration:none; padding:12px; border-radius:8px; margin-top:10px; font-weight:bold;">Check Availability</a>
-                </div>
-            </div>
-
-            <!-- Property 2 -->
-            <div style="background:white; border-radius:16px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
-                <img src="https://unsplash.com" style="width:100%; height:240px; object-fit:cover;">
-                <div style="padding:20px;">
-                    <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <span style="font-weight:bold; color:#ff385c;">Modern Studio</span>
-                        <span style="font-size:14px;">★ 4.88</span>
-                    </div>
-                    <h3 style="margin:10px 0 5px 0;">Cosy Studio - Gachibowli</h3>
-                    <p style="color:#717171; font-size:14px;">Near DLF Cyber City • Fully Furnished</p>
-                    <p style="font-size:18px; font-weight:bold; margin-top:15px;">₹1,950 <span style="font-weight:normal; font-size:14px;">/ night</span></p>
-                    <a href="contact.html" style="display:block; text-align:center; background:#ff385c; color:white; text-decoration:none; padding:12px; border-radius:8px; margin-top:10px; font-weight:bold;">Check Availability</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<!-- THE FLOATING WHATSAPP BUTTON (Connected to 919346573629) -->
-<a href="https://wa.me" style="position:fixed; bottom:30px; right:30px; background:#25D366; color:white; width:70px; height:70px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:40px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); text-decoration:none; z-index:9999; transition: 0.3s;" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i>
+<!-- THE FLOATING WHATSAPP BUTTON WITH ICON FIXED -->
+<a href="https://wa.me" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
 </a>
-
-<footer style="text-align:center; padding:60px 20px; background:#222; color:white; margin-top: 0;">
-    <h2 style="color:#ff385c;">HydAirbnb</h2>
-    <p style="opacity:0.7;">Premium Short Term Rentals in Hyderabad.</p>
-    <hr style="max-width:100px; border:1px solid #444; margin: 30px auto;">
-    <p style="font-size:14px; opacity:0.5;">© 2026 HydAirbnb • Designed for Travelers</p>
-</footer>
 
 </body>
 </html>
