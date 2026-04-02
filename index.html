@@ -1,53 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HydAirbnb | Home</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://jsdelivr.net">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HydAirbnb | Premium Stays in Hyderabad</title>
+
+<style>
+body { font-family: Arial; margin:0; background:#f7f7f7; }
+
+header {
+  background:#ff385c;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:20px;
+}
+
+.card {
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card-content { padding:15px; }
+
+.price { font-weight:bold; margin-top:10px; }
+
+.btn {
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 15px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+.section-title { margin:20px 0 10px; }
+
+form {
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+
+button {
+  background:#ff385c;
+  color:white;
+  padding:10px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.review {
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+footer {
+  text-align:center;
+  padding:20px;
+  background:#eee;
+  margin-top:20px;
+}
+</style>
 </head>
+
 <body>
+
 <header>
-    <a href="index.html" class="logo">HydAirbnb</a>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="properties.html">Stays</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" style="color:var(--brand);">Book Now</a>
-    </nav>
+  <h1>HydAirbnb</h1>
+  <p>Premium stays in Hyderabad for travelers & families</p>
 </header>
 
 <div class="container">
-    <h2 style="margin: 30px 0; text-align: center;">Featured Stays in Hyderabad</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px;">
-        
-        <!-- Property 1: Matches your first filename -->
-        <div class="card">
-            <img src="flat.1jpg.jfif" alt="Hitech City Stay">
-            <div style="padding:20px;">
-                <h3 style="margin:0;">Luxury 2BHK - Hitech City</h3>
-                <p style="color:var(--gray);">Near IKEA • WiFi • AC</p>
-                <p style="font-size:20px; font-weight:bold;">₹3,400 / night</p>
-                <a href="contact.html" class="btn-book">Check Availability</a>
-            </div>
-        </div>
 
-        <!-- Property 2: Matches your second filename -->
-        <div class="card">
-            <img src="flat.2.jpg" alt="Gachibowli Stay">
-            <div style="padding:20px;">
-                <h3 style="margin:0;">Modern Studio - Gachibowli</h3>
-                <p style="color:#717171;">Near DLF Cyber City • Prime Location</p>
-                <p style="font-size:20px; font-weight:bold;">₹1,950 / night</p>
-                <a href="contact.html" class="btn-book">Check Availability</a>
-            </div>
-        </div>
+  <h2 class="section-title">Available Stays</h2>
 
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
+      <div class="card-content">
+        <h3>Luxury 2BHK in Hitech City</h3>
+        <p>WiFi • AC • Parking • Kitchen</p>
+        <p class="price">₹3,000 / night</p>
+        <a class="btn" href="https://wa.me/919346573629">Book Now</a>
+      </div>
     </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
+      <div class="card-content">
+        <h3>Cozy Studio in Gachibowli</h3>
+        <p>WiFi • Kitchen • Prime Location</p>
+        <p class="price">₹1,800 / night</p>
+        <a class="btn" href="https://wa.me/919346573629">Book Now</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Google Map -->
+  <h2 class="section-title">Location</h2>
+  <iframe src="https://www.google.com/maps?q=Hyderabad&output=embed" width="100%" height="300"></iframe>
+
+  <!-- Booking Form -->
+  <h2 class="section-title">Book Your Stay</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <input type="date" required>
+    <textarea placeholder="Your message"></textarea>
+    <button type="submit">Send Booking Request</button>
+  </form>
+
+  <!-- Reviews -->
+  <h2 class="section-title">Customer Reviews</h2>
+
+  <div class="review">
+    ⭐⭐⭐⭐⭐  
+    <p>“Amazing stay, very clean and great location!”</p>
+  </div>
+
+  <div class="review">
+    ⭐⭐⭐⭐⭐  
+    <p>“Loved the service and quick booking process.”</p>
+  </div>
+
 </div>
 
-<a href="https://wa.me" class="whatsapp-float" target="_blank">
-    <i class="bi bi-whatsapp"></i>
-</a>
+<footer>
+  <p>📞 Contact on WhatsApp for instant booking</p>
+  <p>© 2026 HydAirbnb</p>
+</footer>
+
 </body>
 </html>
