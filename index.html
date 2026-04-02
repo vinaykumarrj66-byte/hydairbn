@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HydAirbnb | Premium Stays</title>
-    <!-- FIX: Loading Icons differently so they ALWAYS show -->
-    <link rel="stylesheet" href="https://jsdelivr.net">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin:0; background:#f7f7f7; color: #222; }
+        body { font-family: sans-serif; margin:0; background:#f9f9f9; color: #222; }
+        header { background: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; }
         .container { max-width: 1000px; margin: auto; padding: 20px; }
-        header { background: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; position: sticky; top:0; z-index:100; }
-        .logo { color: #ff385c; font-weight: bold; font-size: 24px; text-decoration: none; }
-        .btn-red { background: #ff385c; color: white; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; display: block; text-align: center; border: none; width: 100%; box-sizing: border-box; }
-        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 25px; border: 1px solid #eee; }
-        /* IMAGE FIX: Using a reliable placeholder if main link fails */
-        .card-img { width: 100%; height: 220px; object-fit: cover; display: block; background: #ddd; }
+        .btn-red { background: #ff385c; color: white; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; display: block; text-align: center; margin-top: 15px; }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 25px; }
+        
+        /* This creates a colored box so it NEVER looks empty */
+        .photo-placeholder { width: 100%; height: 220px; background: #ddd; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #888; font-size: 20px; }
+        
         .card-body { padding: 20px; }
-        .tag { color: #ff385c; font-weight: bold; font-size: 14px; }
-        /* WHATSAPP BUTTON FIX */
-        .whatsapp-btn { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 8px 15px rgba(0,0,0,0.2); z-index: 9999; text-decoration: none; }
+        
+        /* The Floating WhatsApp Button with a fallback emoji */
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 10000; text-decoration: none; }
     </style>
 </head>
 <body>
 
 <header>
-    <a href="index.html" class="logo">HydAirbnb</a>
+    <h1 style="color:#ff385c; margin:0; font-size: 24px;">HydAirbnb</h1>
     <a href="contact.html" style="background:#ff385c; color:white; padding:8px 16px; border-radius:8px; text-decoration:none; font-weight:bold;">Book Now</a>
 </header>
 
@@ -35,28 +34,28 @@
         
         <!-- Property 1 -->
         <div class="card">
-            <img src="https://pexels.com" class="card-img">
+            <div class="photo-placeholder">🏠 Luxury 2BHK Photo</div>
             <div class="card-body">
-                <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-                    <span class="tag">Luxury 2BHK</span><span>★ 4.9</span>
+                <div style="display:flex; justify-content:space-between; color:#ff385c; font-weight:bold;">
+                    <span>Hitech City</span><span>★ 4.9</span>
                 </div>
-                <h3 style="margin:0 0 5px 0;">Executive Suite - Near Mindspace</h3>
-                <p style="color:#717171; font-size:14px; margin:0 0 15px 0;">2 mins from IKEA • High Speed WiFi</p>
-                <p style="font-size:18px; font-weight:bold; margin-bottom:15px;">₹3,400 / night</p>
+                <h3>Executive Suite - Near Mindspace</h3>
+                <p style="color:#717171; font-size:14px;">2 mins from IKEA • High Speed WiFi</p>
+                <p style="font-size:18px; font-weight:bold;">₹3,400 / night</p>
                 <a href="contact.html" class="btn-red">Check Availability</a>
             </div>
         </div>
 
         <!-- Property 2 -->
         <div class="card">
-            <img src="https://pexels.com" class="card-img">
+            <div class="photo-placeholder">🏢 Modern Studio Photo</div>
             <div class="card-body">
-                <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-                    <span class="tag">Modern Studio</span><span>★ 4.8</span>
+                <div style="display:flex; justify-content:space-between; color:#ff385c; font-weight:bold;">
+                    <span>Gachibowli</span><span>★ 4.8</span>
                 </div>
-                <h3 style="margin:0 0 5px 0;">Cosy Studio - Gachibowli</h3>
-                <p style="color:#717171; font-size:14px; margin:0 0 15px 0;">Near DLF Cyber City • Fully Furnished</p>
-                <p style="font-size:18px; font-weight:bold; margin-bottom:15px;">₹1,950 / night</p>
+                <h3>Cosy Studio - Gachibowli</h3>
+                <p style="color:#717171; font-size:14px;">Near DLF Cyber City • Fully Furnished</p>
+                <p style="font-size:18px; font-weight:bold;">₹1,950 / night</p>
                 <a href="contact.html" class="btn-red">Check Availability</a>
             </div>
         </div>
@@ -64,9 +63,9 @@
     </div>
 </div>
 
-<!-- THE FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me" class="whatsapp-btn" target="_blank">
-    <i class="bi bi-whatsapp"></i>
+<!-- FLOATING WHATSAPP BUTTON (Using an Emoji so it always shows) -->
+<a href="https://wa.me" class="whatsapp-float" target="_blank">
+    💬
 </a>
 
 </body>
