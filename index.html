@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HydAirbnb | Stays in Hyderabad</title>
+<title>HydAirbnb | Premium Stays in Hyderabad</title>
 
 <style>
 body { font-family: Arial; margin:0; background:#f7f7f7; }
@@ -11,22 +12,27 @@ body { font-family: Arial; margin:0; background:#f7f7f7; }
 header {
   background:#ff385c;
   color:white;
-  padding:15px;
+  padding:20px;
   text-align:center;
 }
 
 .container {
-  padding:20px;
-  max-width:1000px;
+  max-width:1100px;
   margin:auto;
+  padding:20px;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:20px;
 }
 
 .card {
   background:white;
   border-radius:12px;
   overflow:hidden;
-  margin-bottom:20px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 .card img {
@@ -54,10 +60,15 @@ header {
   border-radius:6px;
 }
 
+.section-title {
+  margin-bottom:15px;
+}
+
 footer {
   text-align:center;
   padding:20px;
   background:#eee;
+  margin-top:20px;
 }
 </style>
 
@@ -67,37 +78,42 @@ footer {
 
 <header>
   <h1>HydAirbnb</h1>
-  <p>Find the best stays in Hyderabad</p>
+  <p>Premium stays in Hyderabad for travelers & families</p>
 </header>
 
 <div class="container">
 
-  <!-- Property 1 -->
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
-    <div class="card-content">
-      <h2>Luxury 2BHK in Hitech City</h2>
-      <p>Free WiFi • AC • Parking • Kitchen</p>
-      <p class="price">₹3,000 / night</p>
-      <a class="btn" href="https://wa.me/+919346573629">Book on WhatsApp</a>
-    </div>
-  </div>
+  <h2 class="section-title">Available Stays</h2>
 
-  <!-- Property 2 -->
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
-    <div class="card-content">
-      <h2>Cozy Studio Near Gachibowli</h2>
-      <p>WiFi • Kitchen • Great Location</p>
-      <p class="price">₹1,800 / night</p>
-      <a class="btn" href="https://wa.me/919346573629">Book on WhatsApp</a>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
+      <div class="card-content">
+        <h3>Luxury 2BHK in Hitech City</h3>
+        <p>WiFi • AC • Parking • Kitchen</p>
+        <p class="price">₹3,000 / night</p>
+        <a class="btn" href="https://wa.me/+919346573629">Book Now</a>
+      </div>
     </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
+      <div class="card-content">
+        <h3>Cozy Studio in Gachibowli</h3>
+        <p>WiFi • Kitchen • Prime Location</p>
+        <p class="price">₹1,800 / night</p>
+        <a class="btn" href="https://wa.me/+919346573629">Book Now</a>
+      </div>
+    </div>
+
   </div>
 
 </div>
 
 <footer>
-  <p>© 2026 HydAirbnb | All rights reserved</p>
+  <p>📞 Contact on WhatsApp for bookings</p>
+  <p>© 2026 HydAirbnb</p>
 </footer>
 
 </body>
