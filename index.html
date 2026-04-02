@@ -1,15 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>HydAirbnb</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HydAirbnb | Stays in Hyderabad</title>
+
+<style>
+body { font-family: Arial; margin:0; background:#f7f7f7; }
+
+header {
+  background:#ff385c;
+  color:white;
+  padding:15px;
+  text-align:center;
+}
+
+.container {
+  padding:20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.card {
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  margin-bottom:20px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card-content {
+  padding:15px;
+}
+
+.price {
+  font-weight:bold;
+  margin-top:10px;
+}
+
+.btn {
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 15px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+footer {
+  text-align:center;
+  padding:20px;
+  background:#eee;
+}
+</style>
+
 </head>
-<body style="font-family: Arial; text-align:center;">
 
-<h1>Welcome to HydAirbnb</h1>
-<p>Your stays in Hyderabad</p>
+<body>
 
-<a href="https://wa.me/919346573629">Book on WhatsApp</a>
+<header>
+  <h1>HydAirbnb</h1>
+  <p>Find the best stays in Hyderabad</p>
+</header>
+
+<div class="container">
+
+  <!-- Property 1 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
+    <div class="card-content">
+      <h2>Luxury 2BHK in Hitech City</h2>
+      <p>Free WiFi • AC • Parking • Kitchen</p>
+      <p class="price">₹3,000 / night</p>
+      <a class="btn" href="https://wa.me/+919346573629">Book on WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Property 2 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
+    <div class="card-content">
+      <h2>Cozy Studio Near Gachibowli</h2>
+      <p>WiFi • Kitchen • Great Location</p>
+      <p class="price">₹1,800 / night</p>
+      <a class="btn" href="https://wa.me/919346573629">Book on WhatsApp</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 HydAirbnb | All rights reserved</p>
+</footer>
 
 </body>
 </html>
