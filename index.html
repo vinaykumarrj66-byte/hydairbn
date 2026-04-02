@@ -1,6 +1,53 @@
-<nav>
-    <a href="index.html">Home</a>
-    <a href="properties.html">Stays</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Book Now</a>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HydAirbnb | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://jsdelivr.net">
+</head>
+<body>
+<header>
+    <a href="index.html" class="logo">HydAirbnb</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="properties.html">Stays</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" style="color:var(--brand);">Book Now</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2 style="margin: 30px 0; text-align: center;">Featured Stays in Hyderabad</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px;">
+        
+        <!-- Property 1: Matches your first filename -->
+        <div class="card">
+            <img src="flat.1jpg.jfif" alt="Hitech City Stay">
+            <div style="padding:20px;">
+                <h3 style="margin:0;">Luxury 2BHK - Hitech City</h3>
+                <p style="color:var(--gray);">Near IKEA • WiFi • AC</p>
+                <p style="font-size:20px; font-weight:bold;">₹3,400 / night</p>
+                <a href="contact.html" class="btn-book">Check Availability</a>
+            </div>
+        </div>
+
+        <!-- Property 2: Matches your second filename -->
+        <div class="card">
+            <img src="flat.2.jpg" alt="Gachibowli Stay">
+            <div style="padding:20px;">
+                <h3 style="margin:0;">Modern Studio - Gachibowli</h3>
+                <p style="color:#717171;">Near DLF Cyber City • Prime Location</p>
+                <p style="font-size:20px; font-weight:bold;">₹1,950 / night</p>
+                <a href="contact.html" class="btn-book">Check Availability</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<a href="https://wa.me" class="whatsapp-float" target="_blank">
+    <i class="bi bi-whatsapp"></i>
+</a>
+</body>
+</html>
