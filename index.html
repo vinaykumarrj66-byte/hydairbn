@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HydAirbnb | Premium Stays</title>
-    <!-- THIS LINE BELOW FIXES THE WHATSAPP LOGO -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- FIX 1: Using a different link for icons -->
+    <link rel="stylesheet" href="https://jsdelivr.net">
     <style>
-        body { font-family: Arial, sans-serif; margin:0; background:#f9f9f9; }
+        body { font-family: sans-serif; margin:0; background:#f9f9f9; }
         .container { max-width: 1100px; margin: auto; padding: 20px; }
         header { background: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; }
-        .btn-primary { background: #ff385c; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; }
+        .btn-primary { background: #ff385c; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; display: block; text-align: center; }
         .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        .card img { width: 100%; height: 250px; object-fit: cover; background: #eee; }
+        /* FIX 2: Better image container */
+        .card-img { width: 100%; height: 250px; background-size: cover; background-position: center; }
         .card-content { padding: 20px; }
-        /* THE FLOATING BUTTON STYLE */
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 10000; text-decoration: none; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 9999; text-decoration: none; }
     </style>
 </head>
 <body>
 
 <header>
     <h1 style="color:#ff385c; margin:0;">HydAirbnb</h1>
-    <nav><a href="contact.html" class="btn-primary">BOOK NOW</a></nav>
+    <nav><a href="contact.html" class="btn-primary" style="padding: 10px 15px;">Book Now</a></nav>
 </header>
 
 <div class="container">
@@ -32,38 +32,39 @@
         
         <!-- Property 1 -->
         <div class="card">
-            <img src="https://unsplash.com">
+            <!-- Using a very reliable image link -->
+            <div class="card-img" style="background-image: url('https://unsplash.com');"></div>
             <div class="card-content">
                 <div style="display:flex; justify-content:space-between; color:#ff385c; font-weight:bold;">
-                    <span>Luxury 2BHK</span><span>★ 4.92</span>
+                    <span>Luxury 2BHK</span><span>★ 4.9</span>
                 </div>
-                <h3>Executive Suite - Near Mindspace</h3>
-                <p style="color:#717171;">2 mins from IKEA • High Speed WiFi</p>
-                <p style="font-size:18px; font-weight:bold;">₹3,400 / night</p>
-                <a href="contact.html" class="btn-primary" style="display:block; text-align:center;">Check Availability</a>
+                <h3 style="margin: 10px 0;">Executive Suite - Near Mindspace</h3>
+                <p style="color:#717171; font-size: 14px;">2 mins from IKEA • High Speed WiFi</p>
+                <p style="font-size:18px; font-weight:bold; margin-top: 15px;">₹3,400 / night</p>
+                <a href="contact.html" class="btn-primary">Check Availability</a>
             </div>
         </div>
 
         <!-- Property 2 -->
         <div class="card">
-            <img src="https://unsplash.com">
+            <div class="card-img" style="background-image: url('https://unsplash.com');"></div>
             <div class="card-content">
                 <div style="display:flex; justify-content:space-between; color:#ff385c; font-weight:bold;">
-                    <span>Modern Studio</span><span>★ 4.88</span>
+                    <span>Modern Studio</span><span>★ 4.8</span>
                 </div>
-                <h3>Cosy Studio - Gachibowli</h3>
-                <p style="color:#717171;">Near DLF Cyber City • Fully Furnished</p>
-                <p style="font-size:18px; font-weight:bold;">₹1,950 / night</p>
-                <a href="contact.html" class="btn-primary" style="display:block; text-align:center;">Check Availability</a>
+                <h3 style="margin: 10px 0;">Cosy Studio - Gachibowli</h3>
+                <p style="color:#717171; font-size: 14px;">Near DLF Cyber City • Fully Furnished</p>
+                <p style="font-size:18px; font-weight:bold; margin-top: 15px;">₹1,950 / night</p>
+                <a href="contact.html" class="btn-primary">Check Availability</a>
             </div>
         </div>
 
     </div>
 </div>
 
-<!-- THE FLOATING WHATSAPP BUTTON WITH ICON FIXED -->
+<!-- FIX 3: Using Bootstrap Icon for WhatsApp -->
 <a href="https://wa.me" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+    <i class="bi bi-whatsapp"></i>
 </a>
 
 </body>
