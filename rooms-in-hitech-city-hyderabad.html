@@ -5,56 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>20+ Budget Rooms in Hitech City Hyderabad | HydAirbnb</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f7f7f7; margin: 0; padding: 0; }
-        header { background: #ff385c; color: white; padding: 20px; text-align: center; }
-        .container { max-width: 1000px; margin: auto; padding: 20px; }
-        /* This is the box for your property */
+        :root { --primary: #ff385c; --success: #25D366; --bg: #f7f7f7; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: var(--bg); color: #333; }
+        
+        /* Navigation Menu */
+        nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo { color: var(--primary); font-size: 22px; font-weight: bold; text-decoration: none; }
+        .nav-links a { margin-left: 15px; text-decoration: none; color: #555; font-size: 14px; font-weight: 500; }
+
+        header { background: var(--primary); color: white; padding: 40px 20px; text-align: center; }
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
+
+        /* Professional Grid Layout */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 30px; }
+        
         .property-card { 
             background: white; 
-            border-radius: 12px; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-            width: 300px; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
             overflow: hidden; 
-            margin-bottom: 20px;
+            transition: 0.3s;
         }
-        .property-info { padding: 15px; }
-        .price { color: #ff385c; font-weight: bold; font-size: 18px; }
+        .property-card:hover { transform: translateY(-8px); }
+        .property-card img { width: 100%; height: 200px; object-fit: cover; }
+        
+        .property-info { padding: 20px; }
+        .property-info h3 { margin: 0 0 10px 0; font-size: 20px; }
+        .price { color: #222; font-weight: bold; font-size: 22px; margin: 15px 0; }
+        .price span { font-size: 14px; color: #777; font-weight: normal; }
+        
         .btn { 
             display: block; 
-            background: #25d366; 
+            background: var(--success); 
             color: white; 
             text-align: center; 
-            padding: 10px; 
+            padding: 12px; 
             text-decoration: none; 
-            border-radius: 5px; 
-            margin-top: 10px; 
+            border-radius: 8px; 
+            font-weight: bold;
+            margin-bottom: 10px;
         }
+        .btn-call { background: white; color: #007bff; border: 2px solid #007bff; }
+
+        footer { text-align: center; padding: 40px; background: #222; color: white; margin-top: 50px; }
     </style>
 </head>
 <body>
 
+<nav>
+    <a href="index.html" class="logo">HydAirbnb</a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="rooms-in-hitech-city-hyderabad.html" style="color:var(--primary)">Hitech City</a>
+        <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
+        <a href="budget-rooms-hyderabad.html">Budget Stays</a>
+    </div>
+</nav>
+
 <header>
     <h1>Rooms in Hitech City</h1>
-    <p>Premium & Budget Stays near Mindspace & Cyber Towers</p>
+    <p>Premium & Budget Stays near Mindspace, Cyber Towers & IKEA</p>
 </header>
 
 <div class="container">
-    <h2>Available Properties (1 of 20)</h2>
+    <h2>Available Properties in Hitech City</h2>
 
-    <!-- PROPERTY BOX START -->
-    <div class="property-card">
-        <img src="https://placeholder.com" alt="Room in Hitech City" style="width:100%">
-        <div class="property-info">
-            <h3>Deluxe Executive Room</h3>
-            <p>📍 Near Hitech City Metro</p>
-            <p>✅ WiFi, AC, Daily Cleaning</p>
-            <p class="price">₹1,500 / night</p>
-            <a href="https://wa.me" class="btn">Chat on WhatsApp</a>
+    <div class="grid">
+        <div class="property-card">
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" alt="Deluxe Room">
+            <div class="property-info">
+                <h3>Deluxe Executive Room</h3>
+                <p>📍 Near Hitech City Metro</p>
+                <p>✅ WiFi, AC, Daily Cleaning, Parking</p>
+                <div class="price">₹1,500 <span>/ night</span></div>
+                <a href="https://wa.me/919346573629?text=Interested in Deluxe Room Hitech City" class="btn">Chat on WhatsApp</a>
+                <a href="tel:+919346573629" class="btn btn-call">Call Now</a>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688" alt="Studio Room">
+            <div class="property-info">
+                <h3>Luxury Studio Apartment</h3>
+                <p>📍 Near Mindspace Junction</p>
+                <p>✅ Kitchen, WiFi, Laundry, 24/7 Power</p>
+                <div class="price">₹2,200 <span>/ night</span></div>
+                <a href="https://wa.me/919346573629?text=Interested in Studio Hitech City" class="btn">Chat on WhatsApp</a>
+                <a href="tel:+919346573629" class="btn btn-call">Call Now</a>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb" alt="Budget Room">
+            <div class="property-info">
+                <h3>Standard Budget Stay</h3>
+                <p>📍 Near Cyber Towers</p>
+                <p>✅ Basic Amenities, CCTV, Prime Location</p>
+                <div class="price">₹1,200 <span>/ night</span></div>
+                <a href="https://wa.me/919346573629?text=Interested in Budget Stay Hitech City" class="btn">Chat on WhatsApp</a>
+                <a href="tel:+919346573629" class="btn btn-call">Call Now</a>
+            </div>
         </div>
     </div>
-    <!-- PROPERTY BOX END -->
-
 </div>
+
+<footer>
+    <p>© 2026 HydAirbnb | Hitech City Stays</p>
+    <p>Contact: +91 9346573629</p>
+</footer>
 
 </body>
 </html>
