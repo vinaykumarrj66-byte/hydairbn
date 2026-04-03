@@ -7,44 +7,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --primary: #ff385c; --secondary: #4285F4; --whatsapp: #25D366; --dark: #1a1a1a; }
-        body { font-family: 'Inter', sans-serif; margin: 0; background: #fff; }
+        body { font-family: 'Inter', sans-serif; margin: 0; background: #fff; color: #333; }
         
         /* Floating WhatsApp Button */
         .whatsapp-float {
-            position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px;
+            position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px;
             background-color: var(--whatsapp); color: #FFF; border-radius: 50px;
-            text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            text-align: center; font-size: 30px; box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
             z-index: 10000; display: flex; align-items: center; justify-content: center;
             text-decoration: none; transition: 0.3s;
         }
-        .whatsapp-float:hover { transform: scale(1.1); background-color: #128C7E; }
+        .whatsapp-float:hover { transform: scale(1.1); }
 
-        /* Navigation & Social Icons */
         nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top:0; z-index: 1000; }
         .logo { color: var(--primary); font-size: 24px; font-weight: 800; text-decoration: none; }
-        .social-nav a { color: #555; margin-left: 15px; font-size: 18px; transition: 0.3s; }
-        .social-nav a:hover { color: var(--primary); }
-
-        /* Hero & Grid Styles (Keep your existing powerful styles here) */
-        .hero { position: relative; height: 70vh; background: var(--dark) url('https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1600&q=80') center/cover; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
-        .hero-content { position: relative; z-index: 10; }
+        .social-nav a { color: #555; margin-left: 15px; font-size: 20px; transition: 0.3s; }
         
-        .container { max-width: 1200px; margin: -50px auto 50px; padding: 0 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-decoration: none; color: inherit; transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-body { padding: 20px; text-align: center; }
+        .hero { position: relative; height: 60vh; background: var(--dark) url('https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1600&q=80') center/cover; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+        .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+        .hero-content { position: relative; z-index: 10; padding: 20px; }
+        .hero h1 { font-size: 42px; margin: 0; }
 
-        /* NEW: Contact Section */
-        .contact-section { background: #f9f9f9; padding: 80px 20px; text-align: center; border-radius: 30px; margin: 40px 20px; }
-        .btn-contact { background: var(--dark); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 20px; transition: 0.3s; }
-        .btn-contact:hover { background: var(--primary); }
+        .container { max-width: 1200px; margin: -40px auto 60px; padding: 0 20px; position: relative; z-index: 20; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-decoration: none; color: inherit; transition: 0.3s; border-bottom: 4px solid transparent; }
+        .card:hover { transform: translateY(-10px); border-bottom: 4px solid var(--primary); }
+        .card img { width: 100%; height: 180px; object-fit: cover; }
+        .card-body { padding: 20px; text-align: center; }
+        .card h3 { margin: 0; font-size: 20px; }
+
+        .contact-box { background: #f8f9fa; padding: 50px 20px; text-align: center; border-radius: 20px; margin-top: 50px; border: 1px solid #eee; }
+        .btn-call { background: var(--dark); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 15px; }
+
+        footer { background: var(--dark); color: #777; padding: 40px 20px; text-align: center; }
     </style>
 </head>
 <body>
 
-<a href="https://wa.me/919346573629?text=Hi HydAirbnb, I'm looking for a room!" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/919346573629?text=I saw your website and need a room!" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -53,14 +53,15 @@
     <div class="social-nav">
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="best-stays-for-google-amazon-employees-hyderabad.html" style="font-size: 14px; font-weight: 700; color: var(--secondary);">Employee Guide</a>
+        <a href="best-stays-for-google-amazon-employees-hyderabad.html" style="font-size: 13px; font-weight: 700; color: var(--secondary); text-decoration: none;">Employee Guide</a>
     </div>
 </nav>
 
 <section class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1>Find Your Home in Hyderabad</h1>
-        <p>80+ Verified Rooms | Zero Brokerage | 5-Min Commute</p>
+        <h1>Find Your Stay</h1>
+        <p>Verified | Budget-Friendly | IT Corridor</p>
     </div>
 </section>
 
@@ -68,26 +69,31 @@
     <div class="grid">
         <a href="rooms-in-hitech-city-hyderabad.html" class="card">
             <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" alt="Hitech City">
-            <div class="card-body">
-                <h3>Hitech City</h3>
-                <p>Near Mindspace & IKEA</p>
-            </div>
+            <div class="card-body"><h3>Hitech City</h3><p>Near Mindspace</p></div>
         </a>
-        </div>
+        <a href="rooms-in-gachibowli-hyderabad.html" class="card">
+            <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf" alt="Gachibowli">
+            <div class="card-body"><h3>Gachibowli</h3><p>Near DLF & ISB</p></div>
+        </a>
+        <a href="rooms-in-madhapur-kondapur-hyderabad.html" class="card">
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688" alt="Madhapur">
+            <div class="card-body"><h3>Madhapur</h3><p>Near Inorbit Mall</p></div>
+        </a>
+        <a href="rooms-in-financial-district-hyderabad.html" class="card">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" alt="Fin District">
+            <div class="card-body"><h3>Fin District</h3><p>Near Google/Amazon</p></div>
+        </a>
+    </div>
 
-    <div class="contact-section" id="contact">
-        <h2>Need Custom Help?</h2>
-        <p>Looking for group bookings or specific office locations? Our experts will find it for you.</p>
-        <a href="tel:+919346573629" class="btn-contact"><i class="fas fa-phone"></i> Contact Us Now</a>
+    <div class="contact-box" id="contact">
+        <h2>Questions? Let's Talk.</h2>
+        <p>Available 24/7 for room inquiries and group bookings.</p>
+        <a href="tel:+919346573629" class="btn-call"><i class="fas fa-phone"></i> Call +91 9346573629</a>
     </div>
 </div>
 
 <footer>
-    <div style="margin-bottom: 20px;">
-        <a href="#" style="color:white; margin: 0 10px; text-decoration: none;"><i class="fab fa-instagram"></i></a>
-        <a href="#" style="color:white; margin: 0 10px; text-decoration: none;"><i class="fab fa-facebook"></i></a>
-    </div>
-    <p>© 2026 HydAirbnb | Verified Hyderabad IT Corridor Stays</p>
+    <p>© 2026 HydAirbnb | Verified Hyderabad IT Stays</p>
 </footer>
 
 </body>
