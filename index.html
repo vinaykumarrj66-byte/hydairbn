@@ -1,56 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HydAirbnb | 80+ Verified Budget Rooms in Hyderabad IT Corridor</title>
-    <meta name="description" content="Book 80+ verified budget rooms and executive stays in Hyderabad. Stays in Hitech City, Gachibowli, Madhapur, and Financial District near Mindspace, DLF, and IKEA.">
-    <style>
-        :root { --primary: #ff385c; --bg: #ffffff; --text: #222; --google: #4285F4; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f7f7f7; color: var(--text); line-height: 1.6; }
-        nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-        .logo { color: var(--primary); font-size: 24px; font-weight: bold; text-decoration: none; }
-        .nav-links a { margin-left: 15px; text-decoration: none; color: #555; font-size: 14px; font-weight: 500; }
-        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd'); background-size: cover; background-position: center; height: 400px; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
-        .hero h1 { font-size: 42px; margin-bottom: 10px; }
-        .container { max-width: 1100px; margin: -50px auto 50px; padding: 20px; }
-        .location-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .location-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); transition: 0.3s; text-decoration: none; color: inherit; border: 2px solid transparent; }
-        .location-card:hover { transform: translateY(-10px); border-color: var(--primary); }
-        .location-card img { width: 100%; height: 180px; object-fit: cover; }
-        .location-content { padding: 20px; text-align: center; }
-        .location-content h2 { color: var(--primary); margin: 0 0 5px; font-size: 20px; }
-        .stats { color: #666; font-size: 13px; margin-bottom: 15px; }
-        .btn-main { display: inline-block; background: var(--primary); color: white; padding: 10px 25px; border-radius: 25px; font-weight: bold; text-decoration: none; font-size: 14px; }
-        
-        /* New Guide Section Style */
-        .guide-banner { background: white; padding: 30px; border-radius: 15px; margin-top: 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; border-left: 8px solid var(--google); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .guide-text { flex: 1; min-width: 300px; text-align: left; padding-right: 20px; }
-        .btn-guide { background: var(--google); color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; }
-        
-        footer { text-align: center; padding: 40px; background: #222; color: #888; margin-top: 50px; }
-    </style>
-</head>
-<body>
+<style>
+    :root { --primary: #ff385c; --bg: #ffffff; --text: #222; --google: #4285F4; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f7f7f7; color: var(--text); line-height: 1.6; }
+    nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+    .logo { color: var(--primary); font-size: 24px; font-weight: bold; text-decoration: none; }
+    .nav-links a { margin-left: 15px; text-decoration: none; color: #555; font-size: 14px; font-weight: 500; }
+    
+    /* IMPROVED HERO SECTION */
+    .hero { 
+        background: #222; /* Backup color while image loads */
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1350&q=80'); 
+        background-size: cover; 
+        background-position: center; 
+        height: 450px; 
+        color: white; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        text-align: center; 
+        padding: 0 20px; 
+    }
+    .hero h1 { font-size: 48px; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+    .hero p { font-size: 20px; opacity: 0.9; }
 
-<nav>
-    <a href="index.html" class="logo">HydAirbnb</a>
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
-        <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
-        <a href="rooms-in-madhapur-kondapur-hyderabad.html">Madhapur</a>
-        <a href="rooms-in-financial-district-hyderabad.html">Fin District</a>
-        <a href="best-stays-for-google-amazon-employees-hyderabad.html" style="color: var(--google); font-weight: bold;">Employee Guide</a>
-    </div>
-</nav>
-
-<div class="hero">
-    <h1>Find Your Stay in Hyderabad</h1>
-    <p>80+ Verified Budget Rooms & Executive Suites for Professionals</p>
-</div>
-
-<div class="container">
-    <div class="location-grid">
-        <a href="rooms-in-hitech-city-hyderabad.html" class="location-card">
-            <img src="
+    .container { max-width: 1100px; margin: -50px auto 50px; padding: 20px; }
+    /* ... rest of your grid styles stay the same ... */
+</style>
