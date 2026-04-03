@@ -7,6 +7,120 @@
     <meta name="description" content="Affordable stays and PGs in Madhapur and Kondapur. Near Inorbit Mall, Image Hospital, and Whitefields. Verified rooms with WiFi and AC starting at ₹800.">
     <style>
         :root { --primary: #ff385c; --success: #25D366; --bg: #f7f7f7; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: var(--bg); color: #333; line-height: 1.6; }
+        nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo { color: var(--primary); font-size: 22px; font-weight: bold; text-decoration: none; }
+        .nav-links a { margin-left: 15px; text-decoration: none; color: #555; font-size: 14px; font-weight: 500; }
+        header { background: #6c5ce7; color: white; padding: 50px 20px; text-align: center; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
+        .property-card { background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; transition: 0.3s; position: relative; }
+        .property-card:hover { transform: translateY(-8px); }
+        .verified-tag { position: absolute; top: 10px; left: 10px; background: white; color: #00a699; padding: 4px 8px; border-radius: 5px; font-size: 11px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .property-card img { width: 100%; height: 200px; object-fit: cover; }
+        .property-info { padding: 20px; }
+        .property-info h3 { margin: 0 0 10px 0; font-size: 18px; color: #222; }
+        .price { color: #222; font-weight: bold; font-size: 20px; margin: 10px 0; }
+        .price span { font-size: 14px; color: #777; font-weight: normal; }
+        .btn { display: block; background: var(--success); color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: bold; }
+        footer { text-align: center; padding: 40px; background: #222; color: white; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">HydAirbnb</a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
+        <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
+        <a href="rooms-in-madhapur-kondapur-hyderabad.html" style="color:var(--primary); font-weight: bold;">Madhapur</a>
+        <a href="rooms-in-financial-district-hyderabad.html">Fin District</a>
+    </div>
+</nav>
+
+<header>
+    <h1>20+ Rooms in Madhapur & Kondapur</h1>
+    <p>Budget PGs & Stays near Inorbit, Image Hospital & Whitefields</p>
+</header>
+
+<div class="container">
+    <div class="grid">
+        <div class="property-card">
+            <div class="verified-tag">✓ TOP RATED</div>
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" alt="Stay near Inorbit Mall Madhapur">
+            <div class="property-info">
+                <h3>Inorbit Lifestyle Stay</h3>
+                <p>📍 2 mins walk to Inorbit Mall & Durgam Cheruvu</p>
+                <div class="price">₹1,800 <span>/ night</span></div>
+                <a href="https://wa.me/919346573629?text=Inorbit Stay" class="btn">WhatsApp Host</a>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <div class="verified-tag">✓ VERIFIED</div>
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688" alt="Stay near Image Hospital Madhapur">
+            <div class="property-info">
+                <h3>Vittal Rao Nagar Executive</h3>
+                <p>📍 Near Image Hospital & Night Food Court</p>
+                <div class="price">₹1,200 <span>/ night</span></div>
+                <a href="https://wa.me/919346573629?text=Image Hospital Stay" class="btn">WhatsApp Host</a>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <div class="verified-tag">✓ CORPORATE</div>
+            <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb" alt="Stay in Whitefields Kondapur">
+            <div class="property-info">
+                <h3>Whitefields Corporate PG</h3>
+                <p>📍 Near Google, Deloitte & Oracle Offices</p>
+                <div class="price">₹1,100 <span>/ night</span></div>
+                <a href="https://wa.me/919346573629?text=Whitefields Stay" class="btn">WhatsApp Host</a>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <div class="verified-tag">✓ LUXURY</div>
+            <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c" alt="Stay near AMB Mall Kondapur">
+            <div class="property-info">
+                <h3>AMB Mall Junction Suite</h3>
+                <p>📍 Walking distance to AMB Cinemas & Sarath City</p>
+                <div class="price">₹1,600 <span>/ night</span></div>
+                <a href="https://wa.me/919346573629?text=AMB Mall Stay" class="btn">WhatsApp Host</a>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <div class="verified-tag">✓ PEACEFUL</div>
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" alt="Stay in Kavuri Hills Madhapur">
+            <div class="property-info">
+                <h3>Kavuri Hills Boutique Room</h3>
+                <p>📍 Near Madhapur PS & Jubilee Hills Rd 36</p>
+                <div class="price">₹2,000 <span>/ night</span></div>
+                <a href="https://wa.me/919346573629?text=Kavuri Hills Stay" class="btn">WhatsApp Host</a>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <div class="verified-tag">✓ TOURIST CHOICE</div>
+            <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb" alt="Stay near Shilparamam Madhapur">
+            <div class="property-info">
+                <h3>Shilparamam Arts Village Stay</h3>
+                <p>📍 Opposite Shilparamam Cultural Park</p>
+                <div class="price">₹1,400 <span>/ night</span></div>
+                <a href="https://wa.me/919346573629?text=Shilparamam Stay" class="btn">WhatsApp Host</a>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <div class="verified-tag">✓ CENTRAL</div>
+            <img src>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20+ Budget Rooms in Madhapur & Kondapur Hyderabad | HydAirbnb</title>
+    <meta name="description" content="Affordable stays and PGs in Madhapur and Kondapur. Near Inorbit Mall, Image Hospital, and Whitefields. Verified rooms with WiFi and AC starting at ₹800.">
+    <style>
+        :root { --primary: #ff385c; --success: #25D366; --bg: #f7f7f7; }
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: var(--bg); color: #333; }
         nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
         .logo { color: var(--primary); font-size: 22px; font-weight: bold; text-decoration: none; }
