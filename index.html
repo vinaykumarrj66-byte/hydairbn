@@ -1,237 +1,109 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Affordable Rooms & Stays in Hyderabad | HydAirbnb</title>
-  <style>
-body { font-family: Arial; margin:0; background:#f7f7f7; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HydAirbnb | Premium Stays & Rooms in Hyderabad</title>
+    <meta name="description" content="Book affordable and luxury stays in Hitech City and Gachibowli. WiFi, AC, and 24/7 support.">
+    <style>
+        :root { --primary: #ff385c; --secondary: #007bff; --success: #25D366; --bg: #f7f7f7; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--bg); color: #333; line-height: 1.6; }
+        
+        /* Navigation */
+        nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); sticky; top: 0; z-index: 1000; }
+        .logo { color: var(--primary); font-size: 24px; font-weight: bold; text-decoration: none; }
+        .nav-links a { margin-left: 20px; text-decoration: none; color: #555; font-weight: 500; font-size: 14px; }
+        .nav-links a:hover { color: var(--primary); }
 
-header {
-  background:#ff385c;
-  color:white;
-  padding:20px;
-  text-align:center;
-}
+        /* Header */
+        header { background: white; padding: 60px 20px; text-align: center; border-bottom: 1px solid #eee; }
+        header h1 { font-size: 36px; margin: 0; color: #222; }
+        header p { font-size: 18px; color: #666; margin-top: 10px; }
 
-.container {
-  max-width:1000px;
-  margin:auto;
-  padding:20px;
-}
+        /* Main Container */
+        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        .section-title { font-size: 28px; margin-bottom: 30px; border-left: 5px solid var(--primary); padding-left: 15px; }
 
-.card {
-  background:white;
-  border-radius:10px;
-  overflow:hidden;
-  margin-bottom:20px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
+        /* Property Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+        .card img { width: 100%; height: 220px; object-fit: cover; }
+        .card-content { padding: 20px; }
+        .card-content h3 { margin: 0 0 10px 0; font-size: 20px; }
+        .tags { font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+        .price { font-size: 22px; font-weight: bold; color: #222; margin: 15px 0; }
+        .price span { font-size: 14px; color: #777; font-weight: normal; }
 
-.card img {
-  width:100%;
-  height:200px;
-  object-fit:cover;
-}
+        /* Buttons */
+        .btn { display: block; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px; transition: 0.2s; }
+        .btn-whatsapp { background: var(--success); color: white; }
+        .btn-call { background: white; color: var(--secondary); border: 2px solid var(--secondary); }
+        .btn-whatsapp:hover { background: #1eb954; }
+        .btn-call:hover { background: var(--secondary); color: white; }
 
-.card-content {
-  padding:15px;
-}
-
-.price {
-  font-weight:bold;
-  margin-top:10px;
-}
-
-.btn {
-  display:inline-block;
-  margin-top:10px;
-  padding:10px 15px;
-  background:#25D366;
-  color:white;
-  text-decoration:none;
-  border-radius:6px;
-}
-
-.call-btn {
-  background:#007bff;
-}
-
-footer {
-  text-align:center;
-  padding:20px;
-  background:#eee;
-  margin-top:20px;
-}
-</style>
-
+        /* Footer */
+        footer { background: #222; color: white; padding: 50px 20px; text-align: center; margin-top: 50px; }
+        .footer-links a { color: #aaa; text-decoration: none; margin: 0 10px; font-size: 14px; }
+    </style>
 </head>
-
 <body>
-  <nav style="background: white; padding: 15px; text-align: center; border-bottom: 1px solid #ddd;">
-    <a href="index.html" style="margin: 0 15px; text-decoration: none; color: #ff385c; font-weight: bold;">Home</a>
-    <a href="rooms-in-hitech-city-hyderabad.html" style="margin: 0 15px; text-decoration: none; color: #333;">Hitech City</a>
-    <a href="rooms-in-gachibowli-hyderabad.html" style="margin: 0 15px; text-decoration: none; color: #333;">Gachibowli</a>
+
+<nav>
+    <a href="index.html" class="logo">HydAirbnb</a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
+        <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
+        <a href="budget-rooms-hyderabad.html">Budget Stays</a>
+    </div>
 </nav>
 
-
-<header style="background:#ff385c; color:white; padding:15px; text-align:center;">
-
-  <h1>HydAirbnb</h1>
-
-  <div style="margin-top:10px;">
-    <a href="index.html" style="color:white; margin:10px;">Home</a>
-    <a href="rooms-in-hitech-city-hyderabad.html" style="color:white; margin:10px;">Hitech City</a>
-    <a href="rooms-in-gachibowli-hyderabad.html" style="color:white; margin:10px;">Gachibowli</a>
-    <a href="budget-rooms-hyderabad.html" style="color:white; margin:10px;">Budget Rooms</a>
-  </div>
-
-</header>
-<div class="container">
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
-    <div class="card-content">
-      <h2>Luxury 2BHK in Hitech City</h2>
-      <p>WiFi • AC • Parking • Kitchen</p>
-      <p style="color:red;">🔥 Only few slots left this weekend</p>
-      <p class="price">₹3,000 / night</p>
-
-      <a class="btn" href="https://wa.me/919346573629?text=Hi%20I%20want%20to%20book%20this%20room">Book on WhatsApp</a>
-
-      <br>
-
-      <a class="btn call-btn" href="tel:+<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HydAirbnb | Hyderabad Stays</title>
-
-<style>
-body { font-family: Arial; margin:0; background:#f7f7f7; }
-
-header {
-  background:#ff385c;
-  color:white;
-  padding:20px;
-  text-align:center;
-}
-
-.container {
-  max-width:1000px;
-  margin:auto;
-  padding:20px;
-}
-
-.card {
-  background:white;
-  border-radius:10px;
-  overflow:hidden;
-  margin-bottom:20px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-
-.card img {
-  width:100%;
-  height:200px;
-  object-fit:cover;
-}
-
-.card-content {
-  padding:15px;
-}
-
-.price {
-  font-weight:bold;
-  margin-top:10px;
-}
-
-.btn {
-  display:inline-block;
-  margin-top:10px;
-  padding:10px 15px;
-  background:#25D366;
-  color:white;
-  text-decoration:none;
-  border-radius:6px;
-}
-
-.call-btn {
-  background:#007bff;
-}
-
-footer {
-  text-align:center;
-  padding:20px;
-  background:#eee;
-  margin-top:20px;
-}
-</style>
-
-</head>
-
-<body>
-
 <header>
-  <h1>HydAirbnb</h1>
-  <p>Affordable & Premium Stays in Hyderabad</p>
+    <h1>Find your next stay in Hyderabad</h1>
+    <p>Handpicked premium rooms, flats, and guest houses.</p>
 </header>
 
 <div class="container">
+    <h2 class="section-title">Featured Listings</h2>
+    
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" alt="Hitech City Room">
+            <div class="card-content">
+                <span class="tags">HITECH CITY • LUXURY</span>
+                <h3>Executive 2BHK Suite</h3>
+                <p>Fully furnished with AC, High-speed WiFi, and 24/7 Power Backup.</p>
+                <div class="price">₹3,000 <span>/ night</span></div>
+                <a href="https://wa.me/919346573629?text=Hi, I'm interested in the Hitech City Suite" class="btn btn-whatsapp">Book via WhatsApp</a>
+                <a href="tel:+919346573629" class="btn btn-call">Call Host</a>
+            </div>
+        </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
-    <div class="card-content">
-      <h2>Luxury 2BHK in Hitech City</h2>
-      <p>WiFi • AC • Parking • Kitchen</p>
-      <p style="color:red;">🔥 Only few slots left this weekend</p>
-      <p class="price">₹3,000 / night</p>
-
-      <a class="btn" href="https://wa.me/919346573629?text=Hi%20I%20want%20to%20book%20this%20room">Book on WhatsApp</a>
-
-      <br>
-
-      <a class="btn call-btn" href="tel:+919346573629">Call Now</a>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae" alt="Gachibowli Room">
+            <div class="card-content">
+                <span class="tags">GACHIBOWLI • COZY</span>
+                <h3>Premium Studio Apartment</h3>
+                <p>Perfect for solo travelers or couples. Includes kitchenette and laundry.</p>
+                <div class="price">₹1,800 <span>/ night</span></div>
+                <a href="https://wa.me/919346573629?text=Hi, I'm interested in the Gachibowli Studio" class="btn btn-whatsapp">Book via WhatsApp</a>
+                <a href="tel:+919346573629" class="btn btn-call">Call Host</a>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <h2>Why Choose Us?</h2>
-  <p>✔ Verified Properties</p>
-  <p>✔ Best Prices</p>
-  <p>✔ Instant Booking on WhatsApp</p>
-  <p>✔ Trusted by Customers</p>
-
 </div>
 
 <footer>
-  <p>Contact us anytime for bookings</p>
-  <p>© 2026 HydAirbnb</p>
-</footer>
-
-</body>
-</html>">Call Now</a>
+    <p><strong>HydAirbnb Hyderabad</strong></p>
+    <p>Your trusted partner for short and long term stays.</p>
+    <div class="footer-links">
+        <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
+        <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
+        <a href="budget-rooms-hyderabad.html">Budget Rooms</a>
     </div>
-  </div>
-
-  <h2>Why Choose Us?</h2>
-  <p>✔ Verified Properties</p>
-  <p>✔ Best Prices</p>
-  <p>✔ Instant Booking on WhatsApp</p>
-  <p>✔ Trusted by Customers</p>
-
-</div>
-
-<footer>
-  <p>Contact us anytime for bookings</p>
-  <p>© 2026 HydAirbnb</p>
+    <p style="margin-top: 20px; color: #666; font-size: 12px;">© 2026 HydAirbnb. All rights reserved.</p>
 </footer>
 
 </body>
 </html>
-<h2>Explore Locations</h2>
-
-<a href="rooms-in-hitech-city-hyderabad.html">Rooms in Hitech City</a><br><br>
-
-<a href="rooms-in-gachibowli-hyderabad.html">Rooms in Gachibowli</a>
