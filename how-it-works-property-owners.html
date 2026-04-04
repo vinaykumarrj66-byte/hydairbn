@@ -3,120 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How It Works | Earn 3X More Rent | HydAirbnb Hyderabad</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>How It Works | Partner with HydAirbnb Hyderabad</title>
+    <meta name="description" content="A simple 3-step process to transform your Hyderabad property into a high-yield corporate stay. Managed by responsible local experts.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        :root { --primary: #ff385c; --dark: #121212; --bg: #ffffff; --light: #f8f9fa; }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; color: #333; background: var(--bg); line-height: 1.6; }
+        :root { --primary: #ff385c; --dark: #0a0a0a; --accent: #4a90e2; --bg: #ffffff; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--bg); color: #333; line-height: 1.6; }
         
-        nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top:0; z-index: 1000; }
-        .logo { color: var(--dark); font-size: 20px; font-weight: 800; text-decoration: none; }
+        /* NAVIGATION */
+        nav { background: white; padding: 10px 5%; border-bottom: 1px solid #eee; position: sticky; top:0; z-index: 2000; }
+        .nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .logo { color: var(--dark); font-size: 22px; font-weight: 800; text-decoration: none; }
         .logo span { color: var(--primary); }
+        .location-menu { display: flex; gap: 20px; justify-content: center; border-top: 1px solid #f5f5f5; padding-top: 10px; flex-wrap: wrap; }
+        .location-menu a { text-decoration: none; color: #888; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 
-        .header { background: var(--dark); color: white; padding: 80px 5%; text-align: center; }
-        .header h1 { font-family: 'Playfair Display', serif; font-size: 40px; margin: 0; }
+        /* HEADER */
+        header { background: #f9f9f9; padding: 80px 20px; text-align: center; border-bottom: 1px solid #eee; }
+        header h1 { font-family: 'Playfair Display', serif; font-size: 42px; margin: 0; color: var(--dark); }
+        header p { font-size: 14px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; margin-top: 10px; }
 
-        .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
+        .container { max-width: 1000px; margin: auto; padding: 60px 20px; }
 
-        /* SECTION 4: EARNINGS EXAMPLE */
-        .earnings-box { background: #fff; border: 2px solid var(--primary); border-radius: 15px; padding: 40px; margin-bottom: 80px; box-shadow: 0 15px 40px rgba(255, 56, 92, 0.1); position: relative; }
-        .earnings-box h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-top: 0; text-align: center; }
-        .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; text-align: center; }
-        .comp-item h4 { text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 10px; }
-        .price { font-size: 36px; font-weight: 800; }
-        .profit-highlight { background: var(--primary); color: white; padding: 20px; border-radius: 8px; margin-top: 20px; font-size: 20px; font-weight: 700; }
+        /* STEPS GRID */
+        .step-card { display: grid; grid-template-columns: 80px 1fr; gap: 20px; margin-bottom: 60px; align-items: start; }
+        .step-number { background: var(--dark); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800; font-family: 'Playfair Display'; }
+        .step-content h2 { font-family: 'Playfair Display'; font-size: 28px; margin: 0 0 15px; color: var(--dark); }
+        .step-content p { color: #555; font-size: 16px; margin-bottom: 10px; }
+        .step-content ul { padding-left: 20px; color: #777; font-size: 14px; }
 
-        /* SIMPLE 3 STEPS */
-        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin: 60px 0; }
-        .step-card { background: var(--light); padding: 40px; border-radius: 12px; text-align: center; }
-        .step-card .icon { font-size: 40px; color: var(--primary); margin-bottom: 20px; }
-        .step-card h3 { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 15px; }
+        /* CITIZEN PROMISE */
+        .citizen-box { background: #f0f4f8; padding: 40px; border-radius: 15px; border-left: 6px solid var(--accent); margin: 60px 0; }
+        .citizen-box h3 { margin-top: 0; color: var(--accent); font-family: 'Playfair Display'; }
 
-        /* WHY CHOOSE US */
-        .why-us { background: #fafafa; padding: 80px 5%; border-radius: 20px; }
-        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
-        .why-item { display: flex; align-items: flex-start; gap: 15px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
-        .why-item i { color: #2ecc71; font-size: 20px; margin-top: 5px; }
-        .why-item strong { font-size: 16px; }
+        .cta-section { background: var(--primary); color: white; padding: 60px 20px; border-radius: 15px; text-align: center; }
+        .btn-white { background: white; color: var(--primary); padding: 16px 40px; border-radius: 4px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 20px; transition: 0.3s; }
+        .btn-white:hover { transform: scale(1.05); }
 
-        .btn-wa { background: #25D366; color: white; padding: 18px 45px; border-radius: 5px; text-decoration: none; font-weight: 700; display: block; width: fit-content; margin: 40px auto; font-size: 18px; }
-
-        footer { text-align: center; padding: 40px; color: #999; border-top: 1px solid #eee; }
-
-        @media (max-width: 768px) { .comparison-grid { grid-template-columns: 1fr; gap: 20px; } }
+        /* FOOTER */
+        footer { background: var(--dark); color: #888; padding: 80px 5% 40px; text-align: center; margin-top: 100px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; max-width: 1200px; margin: 0 auto 40px; }
+        .footer-grid h4 { color: white; font-family: 'Playfair Display'; font-size: 18px; margin-bottom: 20px; }
+        .footer-grid a { display: block; color: #888; text-decoration: none; margin-bottom: 12px; font-size: 14px; }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="index.html" class="logo">Hyd<span>Airbnb</span></a>
-    <a href="index.html" style="text-decoration:none; color:var(--primary); font-weight:700;">← Back to Home</a>
+    <div class="nav-top">
+        <a href="index.html" class="logo">Hyd<span>Airbnb</span></a>
+        <div style="font-weight: 800; font-size: 14px;">CALL: +91 9346573629</div>
+    </div>
+    <div class="location-menu">
+        <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
+        <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
+        <a href="rooms-in-financial-district-hyderabad.html">Financial District</a>
+        <a href="rooms-in-madhapur-kondapur-hyderabad.html">Madhapur</a>
+    </div>
 </nav>
 
-<div class="header">
-    <h1>Passive Income. Proven Results.</h1>
-    <p>How we turn your Hyderabad flat into a cash machine.</p>
-</div>
+<header>
+    <p>Seamless Management</p>
+    <h1>How We Partner With You</h1>
+</header>
 
 <div class="container">
 
-    <div class="earnings-box">
-        <h2>👉 Real Income Potential</h2>
-        <p style="text-align: center; color: #666;">Example: 📍 2BHK in Gachibowli</p>
-        <div class="comparison-grid">
-            <div class="comp-item">
-                <h4>Traditional Rent</h4>
-                <div class="price" style="color: #bbb;">₹20,000</div>
-            </div>
-            <div class="comp-item">
-                <h4>Airbnb Income</h4>
-                <div class="price" style="color: var(--primary);">₹55,000</div>
-            </div>
-        </div>
-        <div class="profit-highlight" style="text-align: center;">
-            Net Profit: ₹35,000 — That’s 2X–3X higher than traditional renting!
+    <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-content">
+            <h2>Smart Setup & Listing</h2>
+            <p>We perform a detailed walkthrough of your property. Our goal is to highlight the local charm and proximity to tech hubs.</p>
+            <ul>
+                <li>Professional architectural photography</li>
+                <li>Strategic pricing based on Hyderabad market trends</li>
+                <li>Syncing across 5+ global travel platforms</li>
+            </ul>
         </div>
     </div>
 
-    <h2 style="text-align:center; font-family: 'Playfair Display', serif; font-size: 36px;">How It Works</h2>
-    <div class="steps-grid">
-        <div class="step-card">
-            <div class="icon"><i class="fas fa-camera"></i></div>
-            <h3>1. We List Your Property</h3>
-            <p>Professional photos and optimized listings across global platforms to attract premium guests.</p>
-        </div>
-        <div class="step-card">
-            <div class="icon"><i class="fas fa-concierge-bell"></i></div>
-            <h3>2. We Manage Guests</h3>
-            <p>From 24/7 check-in to deep cleaning and 5-star hospitality. We handle 100% of the work.</p>
-        </div>
-        <div class="step-card">
-            <div class="icon"><i class="fas fa-wallet"></i></div>
-            <h3>3. You Get Monthly Income</h3>
-            <p>Consistent, higher passive income deposited directly to your bank account every month.</p>
+    <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-content">
+            <h2>Vetted Guest Placement</h2>
+            <p>We act as the gatekeeper for your home. By focusing on responsible corporate travelers, we maintain the sanctity of your property.</p>
+            <ul>
+                <li>Verification of Corporate IDs (Google, Amazon, etc.)</li>
+                <li>Strict adherence to Society Bylaws & Noise levels</li>
+                <li>Coordination of 24/7 check-in and local support</li>
+            </ul>
         </div>
     </div>
 
-    <div class="why-us">
-        <h2 style="text-align:center; font-family: 'Playfair Display', serif; font-size: 32px;">Why Property Owners Trust HydAirbnb</h2>
-        <div class="why-grid">
-            <div class="why-item"><i class="fas fa-check-circle"></i><strong>Hyderabad-based local team</strong></div>
-            <div class="why-item"><i class="fas fa-check-circle"></i><strong>End-to-end management</strong></div>
-            <div class="why-item"><i class="fas fa-check-circle"></i><strong>Verified guests only</strong></div>
-            <div class="why-item"><i class="fas fa-check-circle"></i><strong>Dynamic pricing (maximize earnings)</strong></div>
-            <div class="why-item"><i class="fas fa-check-circle"></i><strong>Zero hassle for owners</strong></div>
+    <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-content">
+            <h2>Deep Care & Returns</h2>
+            <p>Your property is returned to "Showroom Quality" after every stay. You enjoy truly passive income while we handle the grit.</p>
+            <ul>
+                <li>Post-stay deep cleaning and sanitization</li>
+                <li>Preventive maintenance (Plumbing, Electrical, AC)</li>
+                <li>Monthly revenue reports sent directly to your inbox</li>
+            </ul>
         </div>
     </div>
 
-    <a href="https://wa.me/919346573629?text=I want to know the income potential for my property" class="btn-wa">
-        <i class="fab fa-whatsapp"></i> Get Free Income Estimate
-    </a>
+    <div class="citizen-box">
+        <h3>A Local Commitment</h3>
+        <p>As a <strong>responsible citizen of Hyderabad</strong>, I believe in growing the city's hospitality sector ethically. My approach ensures that while you maximize your earnings, your property remains a respected asset within your residential community. No parties, no disturbances—just professional management.</p>
+        <p><strong>— P. Vinay Kumar Reddy, Founder</strong></p>
+    </div>
+
+    <div class="cta-section">
+        <h2>Ready for a Revenue Estimate?</h2>
+        <p>Find out how much your property can earn in today's market.</p>
+        <a href="connect-hydairbnb.html" class="btn-white">Connect With Us</a>
+    </div>
 
 </div>
 
 <footer>
-    <p>© 2026 HydAirbnb | Managed by P. Vinay Kumar Reddy</p>
+    <div class="footer-grid">
+        <div>
+            <h4>Company</h4>
+            <a href="index.html">Home</a>
+            <a href="how-it-works-property-owners.html">How It Works</a>
+            <a href="trust-and-safety-hyderabad.html">Trust & Safety</a>
+        </div>
+        <div>
+            <h4>IT Corridor</h4>
+            <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
+            <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
+            <a href="rooms-in-financial-district-hyderabad.html">Financial District</a>
+        </div>
+        <div>
+            <h4>Contact</h4>
+            <p style="color:#888; font-size:13px;">writeus@hydairbnb.shop</p>
+            <p style="color:#888; font-size:13px; margin-top:10px;">+91 9346573629</p>
+        </div>
+    </div>
+    <p style="font-size:11px; opacity:0.4; margin-top:40px;">© 2026 HydAirbnb | Responsible Management for Global Travelers</p>
 </footer>
 
 </body>
