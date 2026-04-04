@@ -3,88 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Best Stays for Google & Amazon Employees in Hyderabad | HydAirbnb</title>
-    <meta name="description" content="Relocating to Hyderabad for Google or Amazon? Verified luxury rooms and executive 1BHK stays within 5 mins of Google Kondapur & Amazon Financial District.">
-    <meta name="keywords" content="Google Hyderabad employee housing, Amazon Hyderabad office stay, rooms near Google Kondapur, corporate stay Financial District Hyderabad, P. Vinay Kumar Reddy">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Employee Relocation Guide | Google & Amazon Hyderabad | HydAirbnb</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <style>
-        :root { --primary: #ff385c; --dark: #0a0a0a; --google: #4285F4; --amazon: #FF9900; --bg: #ffffff; }
-        * { box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--bg); color: #333; line-height: 1.6; }
-        
-        /* UNIFIED NAV */
-        nav { background: white; padding: 10px 5%; border-bottom: 1px solid #eee; position: sticky; top:0; z-index: 2000; }
-        .nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        :root { --primary: #ff385c; --dark: #0a0a0a; --google: #4285F4; --amazon: #FF9900; }
+        body { font-family: 'Inter', sans-serif; margin: 0; color: #1a1a1a; background: #fff; }
+        nav { background: white; padding: 15px 5%; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; position: sticky; top:0; z-index: 100; }
         .logo { color: var(--dark); font-size: 22px; font-weight: 800; text-decoration: none; }
         .logo span { color: var(--primary); }
-        .location-menu { display: flex; gap: 20px; justify-content: center; border-top: 1px solid #f5f5f5; padding-top: 10px; flex-wrap: wrap; }
-        .location-menu a { text-decoration: none; color: #888; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 
-        header { background: #fdfdfd; padding: 80px 20px; text-align: center; border-bottom: 1px solid #f0f0f0; }
-        .company-badges { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
-        .badge { padding: 6px 18px; border-radius: 50px; font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
-        .google-b { background: #e8f0fe; color: var(--google); }
-        .amazon-b { background: #fff4e5; color: var(--amazon); }
+        header { padding: 80px 5%; text-align: center; border-bottom: 1px solid #f0f0f0; }
+        .badge { display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 11px; font-weight: 800; margin-bottom: 20px; }
         
-        h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 5vw, 42px); color: var(--dark); margin: 0; }
-
-        .container { max-width: 1000px; margin: auto; padding: 60px 20px; }
+        .container { max-width: 900px; margin: auto; padding: 60px 20px; }
+        .guide-card { border: 1px solid #eee; border-radius: 15px; padding: 40px; margin-bottom: 40px; }
+        .guide-card h2 { font-family: 'Playfair Display'; font-size: 28px; margin-top: 0; }
         
-        /* DISTANCE TABLE - SEO GOLD */
-        .distance-card { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 30px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th { text-align: left; padding: 15px; background: #fafafa; font-size: 13px; text-transform: uppercase; }
-        td { padding: 15px; border-bottom: 1px solid #eee; font-size: 15px; }
-        .time-tag { color: var(--primary); font-weight: 800; }
-
-        .guide-section { margin-bottom: 50px; }
-        .guide-section h2 { font-family: 'Playfair Display'; font-size: 28px; border-left: 4px solid var(--primary); padding-left: 20px; margin-bottom: 20px; }
-
-        .cta-banner { background: var(--dark); color: white; padding: 50px; border-radius: 15px; text-align: center; }
-        .btn-prime { background: var(--primary); color: white; padding: 16px 35px; border-radius: 4px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 20px; text-transform: uppercase; font-size: 14px; transition: 0.3s; }
-        .btn-prime:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,56,92,0.3); }
-
-        /* FOOTER */
-        footer { background: var(--dark); color: #888; padding: 80px 5% 40px; text-align: center; margin-top: 50px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; max-width: 1200px; margin: 0 auto 40px; }
-        .footer-grid h4 { color: white; font-family: 'Playfair Display'; font-size: 18px; margin-bottom: 20px; }
-        .footer-grid a { display: block; color: #888; text-decoration: none; margin-bottom: 12px; font-size: 14px; }
-        .social-icons a { color: white; font-size: 24px; margin-right: 20px; }
+        .estimate-banner { background: #f9f9f9; padding: 40px; border-radius: 15px; text-align: center; border: 2px dashed #ddd; }
+        .btn-estimate { background: var(--dark); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 20px; font-size: 12px; letter-spacing: 1px; }
     </style>
 </head>
 <body>
 
 <nav>
-    <div class="nav-top">
-        <a href="index.html" class="logo">Hyd<span>Airbnb</span></a>
-        <div style="font-weight: 800; font-size: 14px;">CALL: +91 9346573629</div>
-    </div>
-    <div class="location-menu">
-        <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
-        <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
-        <a href="rooms-in-financial-district-hyderabad.html">Financial District</a>
-        <a href="rooms-in-madhapur-kondapur-hyderabad.html">Madhapur</a>
-    </div>
+    <a href="index.html" class="logo">Hyd<span>Airbnb</span></a>
+    <a href="connect-hydairbnb.html" style="color: var(--primary); font-weight: 700; text-decoration: none; font-size: 13px;">FREE ESTIMATE</a>
 </nav>
 
 <header>
-    <div class="company-badges">
-        <span class="badge google-b">Google Preferred</span>
-        <span class="badge amazon-b">Amazon Elite</span>
-    </div>
-    <h1>The Ultimate Employee Relocation Guide</h1>
-    <p>Premium, Managed Stays for Tech Professionals in Hyderabad</p>
+    <div class="badge" style="background: #e8f0fe; color: var(--google);">PREFERRED BY GOOGLE TEAMS</div>
+    <div class="badge" style="background: #fff4e5; color: var(--amazon);">AMAZON ELITE STAYS</div>
+    <h1 style="font-family: 'Playfair Display'; font-size: 40px; margin: 0;">Relocation Guide 2026</h1>
+    <p>Premium stays within 5-10 minutes of major IT campuses.</p>
 </header>
 
 <div class="container">
+    <div class="guide-card">
+        <h2>📍 Financial District & Gachibowli</h2>
+        <p>Best for those working at Amazon HQ, Microsoft, or ICICI Towers. We recommend gated communities like My Home Avatar for the ultimate convenience.</p>
+    </div>
 
-    <div class="distance-card">
-        <h3>📍 Commute Distance Matrix</h3>
-        <table>
-            <tr><th>To Campus</th><th>From Best Area</th><th>Travel Time</th></tr>
-            <tr><td>Google Kondapur</td><td>Madhapur / Kondapur</td><td class="time-tag">3-5 Mins</td></tr>
-            <tr><td>Amazon Fin District</td><td>Financial District</td><td class="time-tag">5
+    <div class="estimate-banner">
+        <h3 style="font-family: 'Playfair Display';">Are you a property owner in this area?</h3>
+        <p>Don't just rent—earn corporate yields.</p>
+        <a href="connect-hydairbnb.html" class="btn-estimate">GET A FREE REVENUE ESTIMATE</a>
+    </div>
+</div>
+
+</body>
+</html>
