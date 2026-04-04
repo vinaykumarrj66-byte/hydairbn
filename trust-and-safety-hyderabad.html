@@ -3,101 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trust & Safety | How We Protect Your Property | HydAirbnb Hyderabad</title>
+    
+    <title>Trust & Safety | Secure Property Management Hyderabad | HydAirbnb</title>
+    <meta name="description" content="HydAirbnb's commitment to safety. Verified corporate guests, 24/7 monitoring, and neighborhood-friendly policies for property owners in Hyderabad.">
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        :root { --primary: #ff385c; --dark: #121212; --bg: #ffffff; --safe: #2ecc71; }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; color: #333; background: var(--bg); line-height: 1.7; }
+        :root { --primary: #ff385c; --dark: #0a0a0a; --bg: #ffffff; --safe: #00a699; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--bg); color: #333; line-height: 1.6; }
         
-        nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top:0; z-index: 1000; }
-        .logo { color: var(--dark); font-size: 20px; font-weight: 800; text-decoration: none; }
-        
-        .hero-small { background: var(--dark); color: white; padding: 80px 5%; text-align: center; }
-        .hero-small h1 { font-family: 'Playfair Display', serif; font-size: 38px; margin: 0; }
+        /* UNIFIED NAV */
+        nav { background: white; padding: 10px 5%; border-bottom: 1px solid #eee; position: sticky; top:0; z-index: 2000; }
+        .nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .logo { color: var(--dark); font-size: 22px; font-weight: 800; text-decoration: none; }
+        .logo span { color: var(--primary); }
+        .location-menu { display: flex; gap: 20px; justify-content: center; border-top: 1px solid #f5f5f5; padding-top: 10px; flex-wrap: wrap; }
+        .location-menu a { text-decoration: none; color: #888; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+        header { background: #f4f7f6; padding: 80px 20px; text-align: center; border-bottom: 1px solid #e0e0e0; }
+        header h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 5vw, 42px); color: var(--dark); margin: 0; }
+        header p { color: var(--safe); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-top: 10px; font-size: 13px; }
 
         .container { max-width: 900px; margin: auto; padding: 60px 20px; }
+
+        /* SAFETY CARDS */
+        .safety-card { display: flex; gap: 30px; margin-bottom: 50px; align-items: flex-start; padding: 30px; border-radius: 15px; background: #fff; border: 1px solid #f0f0f0; transition: 0.3s; }
+        .safety-card:hover { border-color: var(--safe); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .icon-box { background: #f0fdfa; color: var(--safe); min-width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+        .text-box h3 { font-family: 'Playfair Display'; font-size: 24px; margin: 0 0 10px; color: var(--dark); }
         
-        /* Protection Cards */
-        .safety-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px; }
-        .safety-card { padding: 30px; border: 1px solid #eee; border-radius: 12px; background: #fff; border-top: 4px solid var(--safe); }
-        .safety-card i { font-size: 30px; color: var(--safe); margin-bottom: 15px; }
+        .founder-promise { background: var(--dark); color: white; padding: 50px; border-radius: 20px; text-align: center; margin-top: 50px; }
+        .founder-promise h2 { font-family: 'Playfair Display'; margin-bottom: 20px; color: var(--primary); }
+        .founder-promise p { font-style: italic; opacity: 0.9; line-height: 1.8; }
 
-        /* FAQ Styling */
-        .faq-item { border-bottom: 1px solid #eee; padding: 25px 0; cursor: pointer; }
-        .faq-question { font-weight: 700; font-size: 18px; display: flex; justify-content: space-between; align-items: center; }
-        .faq-answer { margin-top: 15px; color: #666; display: none; }
-        .faq-item.active .faq-answer { display: block; }
-        .faq-item.active .fa-chevron-down { transform: rotate(180deg); }
+        /* FOOTER */
+        footer { background: var(--dark); color: #888; padding: 80px 5% 40px; text-align: center; margin-top: 100px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; max-width: 1200px; margin: 0 auto 40px; }
+        .footer-grid h4 { color: white; font-family: 'Playfair Display'; font-size: 18px; margin-bottom: 20px; }
+        .footer-grid a { display: block; color: #888; text-decoration: none; margin-bottom: 12px; font-size: 14px; }
+        .social-icons a { color: white; font-size: 24px; margin-right: 20px; }
 
-        .cta-box { background: #f9f9f9; padding: 50px; border-radius: 15px; text-align: center; margin-top: 50px; border: 1px dashed #ccc; }
-        .btn-call { background: var(--dark); color: white; padding: 15px 35px; border-radius: 5px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 20px; }
+        @media (max-width: 600px) { .safety-card { flex-direction: column; text-align: center; align-items: center; } }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="index.html" class="logo">Hyd<span>Airbnb</span></a>
-    <a href="index.html" style="text-decoration:none; color:var(--primary); font-weight:700;">← Back to Home</a>
+    <div class="nav-top">
+        <a href="index.html" class="logo">Hyd<span>Airbnb</span></a>
+        <div style="font-weight: 800; font-size: 14px;">CALL: +91 9346573629</div>
+    </div>
+    <div class="location-menu">
+        <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
+        <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
+        <a href="rooms-in-financial-district-hyderabad.html">Financial District</a>
+        <a href="rooms-in-madhapur-kondapur-hyderabad.html">Madhapur</a>
+    </div>
 </nav>
 
-<div class="hero-small">
-    <h1>Your Asset. Our Responsibility.</h1>
-    <p>How P. Vinay Kumar Reddy & Team Ensure 100% Property Safety</p>
-</div>
+<header>
+    <p>Peace of Mind Guaranteed</p>
+    <h1>Our Commitment to Safety</h1>
+</header>
 
 <div class="container">
-    <div class="safety-grid">
-        <div class="safety-card">
-            <i class="fas fa-user-shield"></i>
-            <h3>Strict Screening</h3>
-            <p>Every guest must provide a Government ID and Corporate Email. No parties, no loud music, no exceptions.</p>
-        </div>
-        <div class="safety-card">
-            <i class="fas fa-house-damage"></i>
-            <h3>Insurance Covered</h3>
-            <p>Up to $3 Million damage protection through Airbnb AirCover plus our internal damage recovery process.</p>
-        </div>
-        <div class="safety-card">
-            <i class="fas fa-wrench"></i>
-            <h3>Regular Upkeep</h3>
-            <p>Minor repairs, plumbing, and electrical checks are handled by our in-house team at no extra cost to you.</p>
+
+    <div class="safety-card">
+        <div class="icon-box"><i class="fas fa-user-check"></i></div>
+        <div class="text-box">
+            <h3>Verified Corporate Guests</h3>
+            <p>We prioritize employees from Tier-1 companies like Google, Amazon, and Microsoft. Every guest undergoes a multi-step verification process, including Government ID checks and employment verification.</p>
         </div>
     </div>
 
-    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; text-align: center;">Frequently Asked Questions</h2>
-    
-    <div class="faq-list">
-        <div class="faq-item" onclick="this.classList.toggle('active')">
-            <div class="faq-question">Who pays the electricity and water bills? <i class="fas fa-chevron-down"></i></div>
-            <div class="faq-answer">All utility bills (Electricity, Water, WiFi) are deducted from the gross revenue. You receive the <b>Net Profit</b> directly. You don't have to worry about payment dates.</div>
-        </div>
-
-        <div class="faq-item" onclick="this.classList.toggle('active')">
-            <div class="faq-question">What if the property is vacant for some days? <i class="fas fa-chevron-down"></i></div>
-            <div class="faq-answer">Unlike traditional rent, Airbnb works on occupancy. However, our dynamic pricing team ensures that even with 70% occupancy, your total monthly income is significantly higher than regular rent.</div>
-        </div>
-
-        <div class="faq-item" onclick="this.classList.toggle('active')">
-            <div class="faq-question">Is it legal to run an Airbnb in Hyderabad? <i class="fas fa-chevron-down"></i></div>
-            <div class="faq-answer">Yes. We comply with all local regulations and maintain guest logs (Police Intimation/Form C where required) to ensure 100% legal compliance for your property.</div>
-        </div>
-
-        <div class="faq-item" onclick="this.classList.toggle('active')">
-            <div class="faq-question">Can I visit my property? <i class="fas fa-chevron-down"></i></div>
-            <div class="faq-answer">Absolutely. It's your property. We just ask for 24-hour notice to ensure we don't disturb a staying guest. You can also block dates for your personal use.</div>
+    <div class="safety-card">
+        <div class="icon-box"><i class="fas fa-home"></i></div>
+        <div class="text-box">
+            <h3>Society Friendly Policies</h3>
+            <p>As responsible residents of Hyderabad, we respect gated community bylaws. We enforce strict "No Party" and "No Noise" policies to ensure your neighbors are never disturbed.</p>
         </div>
     </div>
 
-    <div class="cta-box">
-        <h2>Still have doubts?</h2>
-        <p>Schedule a 10-minute discovery call with our founder to discuss your property.</p>
-        <a href="tel:+919346573629" class="btn-call">Talk to P. Vinay Kumar Reddy</a>
+    <div class="safety-card">
+        <div class="icon-box"><i class="fas fa-broom"></i></div>
+        <div class="text-box">
+            <h3>Showroom Condition Always</h3>
+            <p>Your property is a valuable asset. We perform deep-cleaning after every guest stay and conduct weekly maintenance checks to ensure everything from plumbing to paint stays perfect.</p>
+        </div>
     </div>
+
+    <div class="founder-promise">
+        <h2>Founder’s Promise</h2>
+        <p>"As a responsible citizen and a local Hyderabad resident, I personally oversee the management of every property in our network. Our goal isn't just to generate revenue, but to build a community of trusted stays that benefit both owners and our city's corporate visitors."</p>
+        <p style="margin-top: 20px; font-weight: 800; font-style: normal;">— P. Vinay Kumar Reddy</p>
+    </div>
+
 </div>
 
 <footer>
-    <p style="text-align: center; color: #aaa; padding: 40px;">© 2026 HydAirbnb | Managed Transparency</p>
+    <div class="footer-grid">
+        <div>
+            <h4>Company</h4>
+            <a href="index.html">Home</a>
+            <a href="how-it-works-property-owners.html">How It Works</a>
+            <a href="trust-and-safety-hyderabad.html">Trust & Safety</a>
+        </div>
+        <div>
+            <h4>Areas</h4>
+            <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
+            <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
+            <a href="rooms-in-financial-district-hyderabad.html">Financial District</a>
+        </div>
+        <div>
+            <h4>Connect</h4>
+            <p style="color:#888; font-size:13px;">writeus@hydairbnb.shop</p>
+            <div class="social-icons" style="margin-top:20px;">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/919346573629"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+    <p style="font-size:11px; opacity:0.4; margin-top:40px;">© 2026 HydAirbnb | Managed by a Responsible Local Partner</p>
 </footer>
 
 </body>
