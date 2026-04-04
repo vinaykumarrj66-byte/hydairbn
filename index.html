@@ -3,118 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HydAirbnb | Earn 3X More Than Rent - Professional Property Management</title>
+    <title>HydAirbnb | Premium Airbnb Management Hyderabad | Earn 3X More Than Rent</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #ff385c; --dark: #1a1a1a; --success: #25D366; --bg: #f8f9fa; }
-        body { font-family: 'Inter', sans-serif; margin: 0; color: #333; line-height: 1.6; background: var(--bg); }
+        :root { --primary: #ff385c; --dark: #0a0a0a; --success: #25D366; --gold: #c3a36c; --bg: #ffffff; --text-muted: #888; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; color: #333; line-height: 1.6; background: var(--bg); overflow-x: hidden; }
         
-        /* Floating WhatsApp */
+        h1, h2, h3 { font-family: 'Cinzel', serif; font-weight: 700; }
+
+        /* Cinematic Background Video */
+        .video-background {
+            position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%;
+            z-index: -2; filter: blur(2px) brightness(0.5); /* Mute the video */
+        }
+        .video-overlay { position: fixed; inset: 0; background: rgba(10,10,10,0.7); z-index: -1; }
+
+        /* Floating WhatsApp with pulse */
         .whatsapp-float {
-            position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px;
+            position: fixed; width: 65px; height: 65px; bottom: 30px; right: 30px;
             background-color: var(--success); color: #FFF; border-radius: 50px;
-            text-align: center; font-size: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center; font-size: 32px; box-shadow: 0 10px 25px rgba(0,0,0,0.3);
             z-index: 10000; display: flex; align-items: center; justify-content: center;
-            text-decoration: none;
+            text-decoration: none; animation: pulse 2s infinite;
         }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.08); } 100% { transform: scale(1); } }
 
-        nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top:0; z-index: 1000; }
-        .logo { color: var(--primary); font-size: 24px; font-weight: 800; text-decoration: none; }
-        .nav-links a { margin-left: 15px; text-decoration: none; color: #666; font-size: 13px; font-weight: 600; }
+        /* Elegant Navigation */
+        nav { background: rgba(255,255,255,0.02); backdrop-filter: blur(15px); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); position: sticky; top:0; z-index: 1000; }
+        .logo { color: white; font-size: 26px; font-weight: 800; text-decoration: none; font-family: 'Poppins', sans-serif; letter-spacing: -1px; }
+        .logo span { color: var(--primary); }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { text-decoration: none; color: #eee; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+        .btn-call-nav { color: var(--gold) !important; border: 1px solid var(--gold); padding: 8px 20px; border-radius: 50px; }
 
-        /* Hero */
+        /* Luxury Hero */
         .hero { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1600&q=80');
-            height: 70vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center; background-size: cover;
+            height: 90vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center;
         }
-        .hero h1 { font-size: clamp(30px, 5vw, 50px); margin-bottom: 10px; }
-        .btn-main { background: var(--primary); color: white; padding: 18px 35px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 20px; }
+        .hero-content { max-width: 900px; padding: 20px; z-index: 1; }
+        .hero h1 { font-size: clamp(34px, 6vw, 68px); line-height: 1.1; margin-bottom: 20px; letter-spacing: -2px; }
+        .hero p { font-size: clamp(18px, 2.5vw, 26px); color: var(--gold); font-family: 'Poppins', sans-serif; font-weight: 300; margin-bottom: 40px; }
+        .btn-main { background: var(--primary); color: white; padding: 20px 45px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 18px; display: inline-block; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .btn-main:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(255,56,92,0.4); }
 
-        .section { padding: 60px 5%; max-width: 1100px; margin: auto; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
+        /* ROI Section */
+        .section-roi { padding: 100px 5%; background: var(--bg); text-align: center; position: relative; z-index: 1; }
+        .comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; max-width: 1200px; margin: 60px auto 0; }
         
-        /* Cards */
-        .card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; }
-        .card i { font-size: 40px; color: var(--primary); margin-bottom: 15px; }
+        .comp-card { background: white; padding: 50px; border-radius: 25px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); text-align: left; transition: 0.4s; position: relative; overflow: hidden; }
+        .comp-card:hover { transform: translateY(-10px); }
+        .comp-card h3 { color: var(--dark); font-size: 24px; margin-top: 0; }
+        .income { font-size: 50px; font-weight: 800; font-family: 'Poppins', sans-serif; margin: 25px 0; color: var(--dark); }
+        .airbnb-card { border: 2px solid var(--gold); box-shadow: 0 20px 60px rgba(195,163,108,0.2); }
+        .airbnb-card .income { color: var(--gold); }
+        .comp-card ul { list-style: none; padding: 0; color: var(--text-muted); }
+        .comp-card ul li { margin-bottom: 12px; display: flex; align-items: center; }
+        .comp-card ul li i { color: var(--gold); margin-right: 12px; font-size: 18px; }
 
-        /* Transparency Section */
-        .trust-box { background: var(--dark); color: white; padding: 50px; border-radius: 30px; margin-top: 40px; }
-        .trust-item { border-bottom: 1px solid #333; padding: 15px 0; display: flex; justify-content: space-between; }
-        .trust-item span { color: var(--success); font-weight: bold; }
+        /* Elegant Transparency (Glassmorphism) */
+        .section-trust { padding: 100px 5%; position: relative; z-index: 1; color: white; text-align: center; }
+        .trust-box { 
+            background: rgba(255,255,255,0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08);
+            padding: 60px; border-radius: 30px; max-width: 900px; margin: 50px auto 0;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 30px; text-align: left;
+        }
+        .trust-item { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 15px 0; display: flex; justify-content: space-between; align-items: center; }
+        .trust-item strong { color: #aaa; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; }
+        .trust-item span { color: var(--gold); font-weight: 700; font-size: 16px; }
 
-        /* Guest Portfolio Section */
-        .portfolio { background: #fff; padding: 60px 5%; text-align: center; }
-        .p-card { border-radius: 15px; overflow: hidden; background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-decoration: none; color: inherit; }
-        .p-card img { width: 100%; height: 150px; object-fit: cover; }
+        /* Dynamic Portfolio */
+        .section-locations { padding: 100px 5%; background: var(--bg); position: relative; z-index: 1; text-align: center; }
+        .location-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 60px auto 0; }
+        .loc-card { border-radius: 20px; overflow: hidden; position: relative; height: 350px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); text-decoration: none; color: white; display: flex; align-items: flex-end; transition: 0.4s; }
+        .loc-card:hover { transform: scale(1.03); }
+        .loc-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; transition: 0.5s; }
+        .loc-card:hover img { transform: scale(1.1) rotate(1deg); }
+        .loc-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); z-index: 0; }
+        .loc-content { padding: 30px; position: relative; z-index: 1; text-align: left; }
+        .loc-card h4 { font-size: 22px; margin: 0; font-family: 'Cinzel', serif; }
+        .loc-card p { font-size: 12px; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; margin: 5px 0 0; }
 
-        footer { background: #111; color: #666; padding: 40px; text-align: center; }
+        /* Footer */
+        footer { background: var(--dark); color: #666; padding: 60px 5%; text-align: center; position: relative; z-index: 1; }
+        footer .logo { font-size: 32px; margin-bottom: 20px; display: inline-block; }
+        @media (max-width: 768px) { .trust-box { grid-template-columns: 1fr; padding: 30px; } .hero h1 { font-size: 36px; } nav { flex-direction: column; gap: 10px; } .comp-card { padding: 30px; } }
     </style>
 </head>
 <body>
 
-<a href="https://wa.me/919346573629?text=I want a Free Income Estimate for my Hyderabad property" class="whatsapp-float" target="_blank">
+<video autoplay loop muted class="video-background">
+    <source src="https://assets.mixkit.co/videos/preview/mixkit-luxurious-apartment-interior-with-a-modern-kitchen-34444-large.mp4" type="video/mp4">
+</video>
+<div class="video-overlay"></div>
+
+<a href="https://wa.me/919346573629?text=I'm a property owner. I'd like a free income estimate." class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
 
 <nav>
-    <a href="index.html" class="logo">HydAirbnb</a>
+    <a href="index.html" class="logo">Hyd<span>Airbnb</span></a>
     <div class="nav-links">
-        <a href="#transparency">Transparency</a>
-        <a href="#locations">Our Network</a>
-        <a href="tel:+919346573629" style="color:var(--primary)">Call Expert</a>
+        <a href="#how-it-works">Process</a>
+        <a href="#locations">Locations</a>
+        <a href="tel:+919346573629" class="btn-call-nav">Call Expert</a>
     </div>
 </nav>
 
 <section class="hero">
-    <div style="padding: 20px;">
-        <h1>Earn ₹30,000–₹80,000/Month <br>from your flat in Hyderabad</h1>
-        <p style="font-size: 20px; color: #f1c40f;">We manage. You earn. Zero tenant headaches.</p>
+    <div class="hero-content">
+        <h1>Earn ₹30,000–₹80,000/Month <br>From Your Hyderabad Flat</h1>
+        <p>Premium Airbnb Management. Higher Yields. Zero Stress.</p>
         <a href="https://wa.me/919346573629" class="btn-main">Get Free Income Estimate</a>
     </div>
 </section>
 
-<section class="section">
-    <h2 style="text-align:center">How We Double Your Rental Income</h2>
-    <div class="grid">
-        <div class="card"><i class="fas fa-chart-line"></i><h3>Higher ROI</h3><p>We use dynamic pricing to earn 3X more than traditional 11-month leases.</p></div>
-        <div class="card"><i class="fas fa-user-check"></i><h3>Verified Guests</h3><p>Only corporate professionals from Google, Amazon & Microsoft stay with us.</p></div>
-        <div class="card"><i class="fas fa-broom"></i><h3>Deep Cleaning</h3><p>Professional housekeeping after every guest. Your flat stays in mint condition.</p></div>
+<section class="section-roi" id="how-it-works">
+    <div class="container">
+        <h2>Traditional Leasing is Dead</h2>
+        <p style="color: #666;">We optimize your property to generate boutique hotel-level returns.</p>
+        
+        <div class="comp-grid">
+            <div class="comp-card">
+                <h3>Traditional Leasing</h3>
+                <p>2BHK, Gachibowli / Hitech City</p>
+                <div class="income">₹24,000</div>
+                <ul>
+                    <li><i class="fas fa-times-circle" style="color:#ee5253">
+                    </i> Rigid 11-Month Leases</li>
+                    <li><i class="fas fa-times-circle" style="color:#ee5253">
+                    </i> Tenant Management Hassles</li>
+                    <li><i class="fas fa-times-circle" style="color:#ee5253">
+                    </i> Fixed, Stagnant Returns</li>
+                </ul>
+            </div>
+            
+            <div class="comp-card airbnb-card">
+                <div style="background: var(--gold); color: white; padding: 5px 12px; border-radius: 5px; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; position: absolute; top: 20px; right: 20px;">Premium Management</div>
+                <h3>HydAirbnb Partner</h3>
+                <p>Boutique 2BHK, Fully Managed</p>
+                <div class="income">₹59,000+</div>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Flexible, Short-Term Stays</li>
+                    <li><i class="fas fa-check-circle"></i> Dynamic Pricing Optimization</li>
+                    <li><i class="fas fa-check-circle"></i> Verified Corporate Guests</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="section" id="transparency">
+<section class="section-trust">
+    <h2>100% Owner Transparency</h2>
+    <p style="opacity:0.7">You own the property; we handle the complexity.</p>
+    
     <div class="trust-box">
-        <h2 style="margin-top:0">100% Owner Transparency</h2>
-        <p>You shouldn't have to wonder what's happening with your property.</p>
-        <div class="trust-item">Real-Time Booking Dashboard <span>ACTIVE</span></div>
-        <div class="trust-item">Weekly Video Walkthroughs <span>INCLUDED</span></div>
-        <div class="trust-item">Payout Date <span>5th of Every Month</span></div>
-        <div class="trust-item">Management Fee <span>Flat 20%</span></div>
+        <div class="t-col">
+            <div class="trust-item"><strong>Booking Dashboard</strong> <span>Real-Time (24/7)</span></div>
+            <div class="trust-item"><strong>Guest Verification</strong> <span>Passport / Corporate ID</span></div>
+            <div class="trust-item"><strong>Deep Cleaning</strong> <span>After Every Guest</span></div>
+        </div>
+        <div class="t-col">
+            <div class="trust-item"><strong>Payout Date</strong> <span>5th of Every Month</span></div>
+            <div class="trust-item"><strong>Management Fee</strong> <span>Flat 20% (Net)</span></div>
+            <div class="trust-item"><strong>Video Updates</strong> <span>Weekly Walkthroughs</span></div>
+        </div>
     </div>
 </section>
 
-<section class="portfolio" id="locations">
+<section class="section-locations" id="locations">
     <h2>Our Guest Network</h2>
-    <p>We already have a massive presence in Hyderabad's IT corridor.</p>
-    <div class="grid">
-        <a href="rooms-in-hitech-city-hyderabad.html" class="p-card">
+    <p style="color: #666;">Your property will be part of Hyderabad's most exclusive stay portfolio.</p>
+    
+    <div class="location-grid">
+        <a href="rooms-in-hitech-city-hyderabad.html" class="loc-card">
             <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" alt="Hitech City">
-            <div style="padding:15px"><h4>Hitech City</h4></div>
+            <div class="loc-overlay"></div>
+            <div class="loc-content"><h4>Hitech City</h4><p>Mindspace & Cyber Towers</p></div>
         </a>
-        <a href="rooms-in-gachibowli-hyderabad.html" class="p-card">
+        <a href="rooms-in-gachibowli-hyderabad.html" class="loc-card">
             <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf" alt="Gachibowli">
-            <div style="padding:15px"><h4>Gachibowli</h4></div>
+            <div class="loc-overlay"></div>
+            <div class="loc-content"><h4>Gachibowli</h4><p>Financial District & DLF</p></div>
         </a>
-        <a href="rooms-in-financial-district-hyderabad.html" class="p-card">
-            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" alt="Fin District">
-            <div style="padding:15px"><h4>Financial District</h4></div>
+        <a href="rooms-in-madhapur-kondapur-hyderabad.html" class="loc-card">
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688" alt="Madhapur">
+            <div class="loc-overlay"></div>
+            <div class="loc-content"><h4>Madhapur</h4><p>Inorbit Mall & IKEA</p></div>
         </a>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 HydAirbnb Property Management | Hyderabad <br> 
-    Hitech City • Gachibowli • Financial District • Madhapur</p>
+    <a href="index.html" class="logo">Hyd<span>Airbnb</span></a>
+    <p>Premium Airbnb Asset Management in Hyderabad's IT Corridor.</p>
+    <p style="font-size:12px; margin-top:30px; opacity:0.5;">© 2026 All Rights Reserved.</p>
 </footer>
 
 </body>
