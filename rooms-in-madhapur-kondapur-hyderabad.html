@@ -3,145 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Rooms in Madhapur & Kondapur | HydAirbnb Hyderabad</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Premium Rooms in Madhapur | HydAirbnb Luxury Collection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #ff385c; --dark: #0a0a0a; --success: #25D366; --bg: #ffffff; }
-        * { box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--bg); color: #333; line-height: 1.6; }
-        
-        /* UNIFIED NAV */
-        nav { background: white; padding: 10px 5%; border-bottom: 1px solid #eee; position: sticky; top:0; z-index: 2000; }
-        .nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        :root { --primary: #ff385c; --dark: #0a0a0a; --bg: #ffffff; --grey: #f8f9fa; }
+        body { font-family: 'Inter', sans-serif; margin: 0; color: #1a1a1a; background: var(--bg); }
+        nav { background: white; padding: 15px 5%; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; position: sticky; top:0; z-index: 1000; }
         .logo { color: var(--dark); font-size: 22px; font-weight: 800; text-decoration: none; }
         .logo span { color: var(--primary); }
-        .location-menu { display: flex; gap: 20px; justify-content: center; border-top: 1px solid #f5f5f5; padding-top: 10px; flex-wrap: wrap; }
-        .location-menu a { text-decoration: none; color: #888; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-
-        /* MADHAPUR HEADER */
-        header { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1449156003053-c2d824400591?q=80&w=1500'); background-size: cover; background-position: center; color: white; padding: 80px 20px; text-align: center; }
-        header h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 5vw, 42px); margin: 0; }
-        header p { opacity: 0.9; font-size: 16px; margin-top: 10px; font-weight: 400; }
-
-        /* GRID */
-        .container { max-width: 1200px; margin: auto; padding: 40px 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        
-        .property-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #eee; position: relative; }
-        .property-card:hover { transform: translateY(-10px); }
-        .property-card img { width: 100%; height: 240px; object-fit: cover; }
-        
-        .badge { position: absolute; top: 15px; right: 15px; background: var(--primary); color: white; padding: 5px 12px; border-radius: 4px; font-size: 10px; font-weight: 800; }
-        
-        .property-info { padding: 25px; }
-        .property-info h3 { font-family: 'Playfair Display'; font-size: 20px; margin: 0 0 10px; color: var(--dark); }
-        .property-info p { font-size: 13px; color: #666; margin-bottom: 15px; }
-        .price { font-size: 22px; font-weight: 800; color: var(--dark); margin-bottom: 20px; }
-        .price span { font-size: 14px; color: #888; font-weight: 400; }
-        
-        .btn { display: block; background: var(--dark); color: white; text-align: center; padding: 14px; text-decoration: none; border-radius: 6px; font-weight: 700; transition: 0.3s; text-transform: uppercase; font-size: 13px; letter-spacing: 1px; }
-        .btn:hover { background: var(--primary); }
-
-        /* FOOTER */
-        footer { background: var(--dark); color: #888; padding: 80px 5% 40px; text-align: center; margin-top: 50px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; max-width: 1200px; margin: 0 auto 40px; }
-        .footer-grid h4 { color: white; font-family: 'Playfair Display'; font-size: 18px; margin-bottom: 20px; }
-        .footer-grid a { display: block; color: #888; text-decoration: none; margin-bottom: 12px; font-size: 14px; transition: 0.2s; }
-        .footer-grid a:hover { color: var(--primary); }
-        
-        .social-icons a { color: white; font-size: 24px; margin-right: 20px; text-decoration: none; }
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--success); width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; z-index: 3000; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        header { padding: 80px 5%; text-align: center; background: var(--grey); border-bottom: 1px solid #eee; }
+        header h1 { font-family: 'Playfair Display'; font-size: 42px; margin: 0; color: var(--dark); }
+        .container { max-width: 1200px; margin: auto; padding: 60px 20px; }
+        .property-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .card { border-radius: 15px; overflow: hidden; border: 1px solid #eee; transition: 0.3s; position: relative; background: white; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .card img { width: 100%; height: 250px; object-fit: cover; }
+        .card-content { padding: 25px; }
+        .card-content h3 { font-family: 'Playfair Display'; font-size: 22px; margin: 0 0 10px; }
+        .price { font-weight: 800; font-size: 18px; color: var(--dark); margin-bottom: 20px; }
+        .estimate-bar { background: var(--dark); color: white; padding: 40px; border-radius: 15px; text-align: center; margin-top: 60px; }
+        .btn-estimate { background: var(--primary); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 20px; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; }
+        footer { background: #000; color: #888; padding: 60px 5%; text-align: center; margin-top: 80px; }
     </style>
 </head>
 <body>
-
 <nav>
-    <div class="nav-top">
-        <a href="index.html" class="logo">Hyd<span>Airbnb</span></a>
-        <div style="font-weight: 800; font-size: 14px;">CALL: +91 9346573629</div>
-    </div>
-    <div class="location-menu">
-        <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
-        <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
-        <a href="rooms-in-financial-district-hyderabad.html">Financial District</a>
-        <a href="rooms-in-madhapur-kondapur-hyderabad.html" style="color:var(--primary)">Madhapur</a>
-    </div>
+    <a href="index.html" class="logo">Hyd<span>Airbnb</span></a>
+    <a href="connect-hydairbnb.html" style="color: var(--primary); font-weight: 800; text-decoration: none; font-size: 13px; letter-spacing: 1px;">FREE ESTIMATE</a>
 </nav>
-
 <header>
     <h1>Madhapur & Kondapur Collection</h1>
-    <p>Luxury Stays near Inorbit Mall, Google, and HITEX Exhibition Center</p>
+    <p>Luxury Stays near Inorbit Mall and Google Offices</p>
 </header>
-
 <div class="container">
-    <div class="grid">
-        <div class="property-card">
-            <div class="badge">TOP RATED</div>
-            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688" alt="Madhapur Room">
-            <div class="property-info">
-                <h3>Inorbit Signature Suite</h3>
-                <p>📍 500m from Inorbit Mall & Durgam Cheruvu Cable Bridge</p>
-                <div class="price">₹3,200 <span>/ night</span></div>
-                <a href="connect-hydairbnb.html" class="btn">Check Availability</a>
+    <div class="property-grid">
+        <div class="card">
+            <img src="flat.1jpg.jfif" alt="Madhapur Room">
+            <div class="card-content">
+                <h3>Inorbit Signature Stay</h3>
+                <p>📍 Walking distance to Inorbit Mall</p>
+                <div class="price">₹2,700 <span>/ night</span></div>
+                <a href="connect-hydairbnb.html" style="color: var(--primary); font-weight: 800; text-decoration: none;">CHECK AVAILABILITY →</a>
             </div>
         </div>
-
-        <div class="property-card">
-            <div class="badge">NEWLY ADDED</div>
-            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" alt="Kondapur Room">
-            <div class="property-info">
-                <h3>Kondapur Corporate Hub 1BHK</h3>
-                <p>📍 Near Sarath City Capital Mall & Google Office</p>
-                <div class="price">₹1,900 <span>/ night</span></div>
-                <a href="connect-hydairbnb.html" class="btn">Check Availability</a>
+        <div class="card">
+            <img src="flat.2.jpg" alt="Kondapur Room">
+            <div class="card-content">
+                <h3>Google Campus Elite 1BHK</h3>
+                <p>📍 Perfect for Google & Amazon relocation</p>
+                <div class="price">₹2,400 <span>/ night</span></div>
+                <a href="connect-hydairbnb.html" style="color: var(--primary); font-weight: 800; text-decoration: none;">CHECK AVAILABILITY →</a>
             </div>
         </div>
-
-        <div class="property-card">
-            <div class="badge">BUSINESS PRO</div>
-            <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb" alt="HITEX Room">
-            <div class="property-info">
-                <h3>HITEX Exhibition Stay</h3>
-                <p>📍 Perfect for Exhibition visitors near Novotel</p>
-                <div class="price">₹2,500 <span>/ night</span></div>
-                <a href="connect-hydairbnb.html" class="btn">Check Availability</a>
-            </div>
-        </div>
+    </div>
+    <div class="estimate-bar">
+        <h2 style="font-family: 'Playfair Display';">Own a property in Madhapur?</h2>
+        <p style="opacity: 0.8;">Turn your home into a high-earning asset for corporate travelers.</p>
+        <a href="connect-hydairbnb.html" class="btn-estimate">Get a Free Revenue Estimate</a>
     </div>
 </div>
-
-<a href="https://wa.me/919346573629" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
-
-<footer>
-    <div class="footer-grid">
-        <div>
-            <h4>Company</h4>
-            <a href="index.html">Home</a>
-            <a href="how-it-works-property-owners.html">How It Works</a>
-            <a href="trust-and-safety-hyderabad.html">Trust & Safety</a>
-            <a href="connect-hydairbnb.html">Book a Stay</a>
-        </div>
-        <div>
-            <h4>Locations</h4>
-            <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
-            <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
-            <a href="rooms-in-financial-district-hyderabad.html">Financial District</a>
-            <a href="rooms-in-madhapur-kondapur-hyderabad.html">Madhapur</a>
-        </div>
-        <div>
-            <h4>Connect</h4>
-            <p style="color:#888; font-size:13px; margin-bottom: 10px;">Managed by Vinay Kumar Reddy.</p>
-            <a href="mailto:writeus@hydairbnb.shop" style="font-weight:700; color:var(--primary); text-decoration:none;">writeus@hydairbnb.shop</a>
-            <div class="social-icons" style="margin-top:20px;">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-    </div>
-    <p style="font-size:11px; opacity:0.4; margin-top:40px;">© 2026 HydAirbnb | Empowering Property Owners in Hyderabad</p>
-</footer>
-
+<footer><p>© 2026 HYDAIRBNB | MANAGED BY P. VINAY KUMAR REDDY</p></footer>
 </body>
 </html>
