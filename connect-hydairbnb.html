@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect | Book a Stay or List Your Property | HydAirbnb Hyderabad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --primary: #ff385c; --dark: #0a0a0a; --success: #25D366; --bg: #ffffff; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--bg); color: #333; line-height: 1.6; }
+        
+        /* Universal Navigation */
+        nav { background: white; padding: 10px 5%; border-bottom: 1px solid #eee; position: sticky; top:0; z-index: 2000; }
+        .nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .logo { color: var(--dark); font-size: 22px; font-weight: 800; text-decoration: none; }
+        .logo span { color: var(--primary); }
+        .location-menu { display: flex; gap: 20px; justify-content: center; border-top: 1px solid #f5f5f5; padding-top: 10px; flex-wrap: wrap; }
+        .location-menu a { text-decoration: none; color: #666; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Split Portal Design */
+        .portal-header { text-align: center; padding: 60px 20px 20px; }
+        .portal-header h1 { font-family: 'Playfair Display', serif; font-size: 38px; margin-bottom: 10px; }
+        
+        .container { max-width: 1000px; margin: 0 auto 80px; padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .form-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); border: 1px solid #f0f0f0; }
+        .form-card h2 { font-family: 'Playfair Display', serif; font-size: 24px; margin-top: 0; color: var(--dark); border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; margin-bottom: 25px; }
+
+        /* Form Styling */
+        .form-group { margin-bottom: 18px; }
+        label { display: block; font-size: 11px; font-weight: 800; margin-bottom: 8px; color: #555; text-transform: uppercase; letter-spacing: 1px; }
+        input, select { width: 100%; padding: 12px; border: 1px solid #e0e0e0; border-radius: 4px; font-family: inherit; font-size: 14px; background: #fafafa; }
+        input:focus { outline: none; border-color: var(--primary); background: #fff; }
+        
+        .btn-submit { background: var(--dark); color: white; border: none; padding: 16px; width: 100%; border-radius: 4px; font-weight: 800; font-size: 14px; cursor: pointer; transition: 0.3s; margin-top: 10px; text-transform: uppercase; letter-spacing: 1px; }
+        .btn-owner { background: var(--primary); }
+        .btn-submit:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        /* Sticky Action Buttons */
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--success); width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; z-index: 3000; box-shadow: 0 10px 25px rgba(0,0,0,0.2); text-decoration: none; }
+        .consult-btn { position: fixed; bottom: 30px; left: 30px; background: var(--dark); color: white; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 12px; z-index: 3000; box-shadow: 0 10px 25px rgba(0,0,0,0.2); letter-spacing: 1px; }
+
+        /* Footer - Same as Homepage */
+        footer { background: var(--dark); color: #888; padding: 80px 5%; text-align: center; }
+        .social-icons { margin-bottom: 30px; }
+        .social-icons a { color: white; font-size: 28px; margin: 0 15px; text-decoration: none; }
+        .footer-mail { color: white; text-decoration: none; font-weight: 600; font-size: 18px; display: block; margin-top: 10px; }
+
+        @media (max-width: 850px) { .container { grid-template-columns: 1fr; } .portal-header h1 { font-size: 28px; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-top">
+        <a href="index.html" class="logo">Hyd<span>Airbnb</span></a>
+        <div style="font-weight: 800; font-size: 14px;">CALL: +91 9346573629</div>
+    </div>
+    <div class="location-menu">
+        <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
+        <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
+        <a href="rooms-in-financial-district-hyderabad.html">Financial District</a>
+        <a href="rooms-in-madhapur-kondapur-hyderabad.html">Madhapur</a>
+    </div>
+</nav>
+
+<div class="portal-header">
+    <h1>Connect with HydAirbnb</h1>
+    <p>Whether you are looking for a premium stay or professional property management, we are here to help.</p>
+</div>
+
+<div class="container">
+    
+    <div class="form-card">
+        <h2>Property Owners</h2>
+        <p style="font-size: 13px; color: #777; margin-bottom: 20px;">Request a free revenue report and audit for your flat.</p>
+        <form action="https://formspree.io/f/your_id" method="POST">
+            <div class="form-group"><label>Full Name</label><input type="text" name="owner_name" required></div>
+            <div class="form-group"><label>Mobile Number</label><input type="tel" name="owner_phone" required></div>
+            <div class="form-group"><label>Email Address</label><input type="email" name="owner_email" required></div>
+            <div class="form-group"><label>Property Location & BHK</label><input type="text" name="property_info" placeholder="Ex: 3BHK in Gachibowli" required></div>
+            <div class="form-group"><label>Current Monthly Rent (₹)</label><input type="number" name="current_rent"></div>
+            <button type="submit" class="btn-submit btn-owner">Get My Income Estimate</button>
+        </form>
+    </div>
+
+    <div class="form-card">
+        <h2>Guests & Reservations</h2>
+        <p style="font-size: 13px; color: #777; margin-bottom: 20px;">Book a verified corporate stay in Hyderabad's IT corridor.</p>
+        <form action="https://formspree.io/f/your_id" method="POST">
+            <div class="form-group"><label>Full Name</label><input type="text" name="guest_name" required></div>
+            <div class="form-group"><label>Mobile Number</label><input type="tel" name="guest_phone" required></div>
+            <div class="form-group"><label>Email Address</label><input type="email" name="guest_email" required></div>
+            <div class="form-group"><label>Preferred Area</label>
+                <select name="guest_area">
+                    <option>Financial District</option>
+                    <option>Hitech City</option>
+                    <option>Gachibowli</option>
+                    <option>Madhapur</option>
+                </select>
+            </div>
+            <div class="form-group"><label>Duration of Stay (Days)</label><input type="number" name="stay_days" required></div>
+            <button type="submit" class="btn-submit">Check Availability</button>
+        </form>
+    </div>
+
+</div>
+
+<a href="https://wa.me/919346573629" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+<a href="tel:+919346573629" class="consult-btn">BOOK FREE CONSULTATION</a>
+
+<footer>
+    <a href="index.html" style="font-size: 28px; font-weight: 800; color: white; text-decoration: none; display: block; margin-bottom: 30px;">Hyd<span>Airbnb</span></a>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>Contact our support team directly:</p>
+    <a href="mailto:writeus@hydairbnb.shop" class="footer-mail">writeus@hydairbnb.shop</a>
+    <p style="font-size:11px; opacity:0.3; margin-top:50px;">© 2026 HydAirbnb Property Management | Founded by P. Vinay Kumar Reddy</p>
+</footer>
+
+</body>
+</html>
