@@ -18,57 +18,45 @@
         .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); z-index: -1; }
         .hero-text { text-align: center; color: white; max-width: 900px; padding: 20px; z-index: 1; }
         .hero-text h1 { font-size: clamp(32px, 5vw, 62px); margin: 0; line-height: 1.1; }
-        .btn-main { background: var(--primary); color: white; padding: 18px 40px; border-radius: 4px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 30px; transition: 0.3s; cursor: pointer; border: none; }
+        .btn-main { background: var(--primary); color: white; padding: 18px 40px; border-radius: 4px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 30px; transition: 0.3s; border: none; }
 
-        /* NAVIGATION */
         nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top:0; z-index: 1000; }
         .logo { color: var(--dark); font-size: 24px; font-weight: 800; text-decoration: none; }
         .logo span { color: var(--primary); }
 
-        /* STATS BAR */
         .stats-bar { background: var(--dark); color: white; padding: 60px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center; gap: 30px; }
-        .stat-item h2 { color: var(--primary); font-size: 45px; margin: 0; font-family: 'Montserrat', sans-serif; }
-        .stat-item p { text-transform: uppercase; letter-spacing: 2px; font-size: 11px; opacity: 0.7; }
+        .stat-item h2 { color: var(--primary); font-size: 45px; margin: 0; }
 
-        /* SECTION STYLING */
         .section { padding: 80px 5%; max-width: 1200px; margin: auto; }
         .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-size: 38px; margin-bottom: 10px; }
-
-        /* COMPARISON TABLE */
-        .revenue-table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 10px 40px rgba(0,0,0,0.05); border-radius: 10px; overflow: hidden; }
+        
+        .revenue-table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 10px 40px rgba(0,0,0,0.05); border-radius: 10px; overflow: hidden; margin-bottom: 50px; }
         .revenue-table th { background: #f8f9fa; padding: 20px; text-align: left; }
         .revenue-table td { padding: 20px; border-bottom: 1px solid #eee; }
         .high-yield { color: var(--primary); font-weight: 800; }
 
-        /* TRANSPARENCY CARDS */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { background: #fafafa; padding: 40px; border-top: 4px solid var(--primary); }
-
         /* MOVING TESTIMONIALS */
         .slider-wrap { background: #f4f4f4; padding: 80px 0; overflow: hidden; }
-        .track { display: flex; width: calc(350px * 10); animation: scroll 35s linear infinite; }
+        .track { display: flex; width: calc(350px * 12); animation: scroll 40s linear infinite; }
         .t-card { width: 350px; background: white; margin: 0 20px; padding: 30px; border-radius: 8px; flex-shrink: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-350px * 5)); } }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-350px * 6)); } }
 
         /* FOUNDER SECTION */
         .founder-box { display: flex; gap: 60px; align-items: center; flex-wrap: wrap; padding: 80px 0; }
         .founder-img { width: 350px; height: 450px; background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80') center/cover; border-radius: 8px; box-shadow: 20px 20px 0 var(--primary); }
         .founder-content { flex: 1; min-width: 300px; }
-        .article-hide { display: none; margin-top: 20px; }
+        .article-hide { display: none; margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px; }
 
-        /* FOOTER & VERTICAL LINKS */
-        footer { background: var(--dark); color: #888; padding: 80px 5%; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; margin-bottom: 50px; }
-        .footer-grid h4 { color: white; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; }
-        .footer-grid a { display: block; color: #666; text-decoration: none; margin-bottom: 10px; font-size: 14px; }
+        /* FOOTER LINKS */
+        footer { background: var(--dark); color: #888; padding: 80px 5%; margin-top: 50px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; }
+        .footer-grid h4 { color: white; margin-bottom: 20px; }
+        .footer-grid a { display: block; color: #666; text-decoration: none; margin-bottom: 12px; }
         .footer-grid a:hover { color: var(--primary); }
-        .social-icons a { color: white; font-size: 24px; margin-right: 20px; text-decoration: none; }
-        
-        .chat-btn { position: fixed; bottom: 30px; right: 30px; background: var(--success); width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; cursor: pointer; z-index: 2000; }
-        .bot-popup { position: fixed; bottom: 100px; right: 30px; width: 300px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: none; flex-direction: column; z-index: 2000; border: 1px solid #eee; }
-        
-        @media (max-width: 768px) { .founder-box { flex-direction: column; text-align: center; } .founder-img { width: 100%; box-shadow: none; } }
+        .social-icons { margin-top: 20px; }
+        .social-icons a { color: white; font-size: 24px; margin-right: 20px; }
+
+        .chat-btn { position: fixed; bottom: 30px; right: 30px; background: var(--success); width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; cursor: pointer; z-index: 2000; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
     </style>
 </head>
 <body>
@@ -76,14 +64,14 @@
 <nav>
     <a href="index.html" class="logo">Hyd<span>Airbnb</span></a>
     <div class="nav-links">
-        <a href="#vision" style="text-decoration:none; color:#444; font-weight:600; margin-left:20px;">Vision</a>
+        <a href="#revenue" style="text-decoration:none; color:#444; font-weight:600; margin-left:20px;">Earnings</a>
         <a href="#founder" style="text-decoration:none; color:#444; font-weight:600; margin-left:20px;">Founder</a>
-        <a href="tel:+919346573629" style="color:var(--primary); font-weight:800; text-decoration:none; margin-left:20px;">+91 9346573629</a>
+        <a href="tel:+919346573629" style="color:var(--primary); font-weight:800; text-decoration:none; margin-left:20px;">Call Now</a>
     </div>
 </nav>
 
 <div class="hero-container">
-    <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1600" class="bg-video">
+    <video autoplay loop muted playsinline class="bg-video">
         <source src="https://cdn.pixabay.com/video/2021/08/21/85848-591745423_large.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
@@ -97,23 +85,13 @@
 <section class="stats-bar">
     <div class="stat-item"><h2>100+</h2><p>Properties Managed</p></div>
     <div class="stat-item"><h2>4500+</h2><p>Happy Customers</p></div>
-    <div class="stat-item"><h2>2.8X</h2><p>Revenue Spike</p></div>
-    <div class="stat-item"><h2>100%</h2><p>Trust Score</p></div>
+    <div class="stat-item"><h2>2.8X</h2><p>Revenue Increase</p></div>
 </section>
 
-<section class="section">
-    <div class="section-title"><h2>100% Transparency Guide</h2><p>We believe in partnerships, not just contracts.</p></div>
-    <div class="grid">
-        <div class="card"><h3>Live Dashboards</h3><p>Access your earnings, guest IDs, and booking calendars 24/7 in real-time.</p></div>
-        <div class="card"><h3>Weekly Inspections</h3><p>Receive a high-definition video walkthrough of your property every Sunday.</p></div>
-        <div class="card"><h3>Fixed Payouts</h3><p>Guaranteed profit transfer by the 5th of every month. Zero delays.</p></div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="section-title"><h2>The Comparison</h2><p>Why HydAirbnb beats traditional leasing every single time.</p></div>
+<section class="section" id="revenue">
+    <div class="section-title"><h2>Comparison Guide</h2><p>Maximum transparency in your earning potential.</p></div>
     <table class="revenue-table">
-        <thead><tr><th>Location (2BHK)</th><th>Standard Rent</th><th>HydAirbnb Income</th><th>Profit Boost</th></tr></thead>
+        <thead><tr><th>Location (2BHK)</th><th>Standard Rent</th><th>HydAirbnb Income</th><th>Boost</th></tr></thead>
         <tbody>
             <tr><td>Financial District</td><td>₹28,000</td><td class="high-yield">₹72,000+</td><td>+157%</td></tr>
             <tr><td>Hitech City</td><td>₹25,000</td><td class="high-yield">₹65,000+</td><td>+160%</td></tr>
@@ -123,26 +101,77 @@
 </section>
 
 <div class="slider-wrap">
-    <h2 style="text-align:center; font-family:'Playfair Display'; margin-bottom:40px;">Real Stories From Real Owners</h2>
+    <h2 style="text-align:center; font-family:'Playfair Display'; margin-bottom:40px;">Real Owner Stories</h2>
     <div class="track">
-        <div class="t-card"><p>"I earn ₹75k now compared to ₹28k rent earlier. The maintenance is top-notch."</p><strong>- Kiran M. (Financial District)</strong></div>
-        <div class="t-card"><p>"Best decision for my vacant flat. Professional corporate guests only."</p><strong>- Sunita R. (Hitech City)</strong></div>
-        <div class="t-card"><p>"Managing from USA was hard. HydAirbnb made it completely passive for me."</p><strong>- Vikram T. (NRI Owner)</strong></div>
-        <div class="t-card"><p>"Transparency is key. I love the weekly video updates of my property."</p><strong>- S. Reddy (Gachibowli)</strong></div>
-        <div class="t-card"><p>"My asset value has increased because they keep the flat in mint condition."</p><strong>- David L. (Owner)</strong></div>
-        <div class="t-card"><p>"I earn ₹75k now compared to ₹28k rent earlier. The maintenance is top-notch."</p><strong>- Kiran M. (Financial District)</strong></div>
+        <div class="t-card"><p>"I earn ₹75k now compared to ₹28k rent earlier. The maintenance is top-notch."</p><strong>- Kiran M.</strong></div>
+        <div class="t-card"><p>"Best decision for my vacant flat. Professional corporate guests only."</p><strong>- Sunita R.</strong></div>
+        <div class="t-card"><p>"Managing from USA was hard. HydAirbnb made it completely passive."</p><strong>- Vikram T.</strong></div>
+        <div class="t-card"><p>"Transparency is key. I love the weekly video updates of my property."</p><strong>- S. Reddy</strong></div>
+        <div class="t-card"><p>"I earn ₹75k now compared to ₹28k rent earlier. The maintenance is top-notch."</p><strong>- Kiran M.</strong></div>
+        <div class="t-card"><p>"Best decision for my vacant flat. Professional corporate guests only."</p><strong>- Sunita R.</strong></div>
     </div>
 </div>
 
 <section class="section" id="vision">
-    <div class="section-title"><h2>Our Vision</h2><p>Transforming real estate assets into wealth-generation engines.</p></div>
-    <p style="text-align:center; max-width:800px; margin:auto; font-size:18px;">To be Hyderabad's most trusted partner in short-term asset management, ensuring every property owner unlocks the true financial potential of their investment through technology and professional hospitality.</p>
+    <div class="section-title"><h2>Our Vision</h2><p>Building wealth for Hyderabad homeowners.</p></div>
+    <p style="text-align:center; max-width:800px; margin:auto; font-size:18px;">To be Hyderabad's most trusted partner in short-term asset management, ensuring every property owner unlocks the true financial potential of their investment.</p>
 </section>
 
-<section class="section" id="founder" style="background:#fcfcfc;">
+<section class="section" id="founder">
     <div class="founder-box">
         <div class="founder-img"></div>
         <div class="founder-content">
             <p style="color:var(--primary); font-weight:800; letter-spacing:2px; text-transform:uppercase; font-size:12px;">Founder's Story</p>
             <h2>P. Vinay Kumar Reddy</h2>
-            <p>Coming from a non-IT background, Vinay faced numerous hurdles in life, from career pivots to the complexities of the real estate market. He didn't just build a business; he solved a problem he
+            <p>Coming from a non-IT background, Vinay faced numerous hurdles in life, from career pivots to the complexities of the real estate market. He didn't just build a business; he solved a problem he personally encountered.</p>
+            <div id="full-story" class="article-hide">
+                <p>His journey is one of resilience. Having navigated the traditional rental market and seeing how owners were being underserved, Vinay envisioned a platform where transparency was the foundation. Today, HydAirbnb stands as a testament to his belief that hard work and clear vision can transform a fragmented market into a professional asset management hub.</p>
+            </div>
+            <button onclick="toggleStory()" id="story-btn" style="background:none; border:none; color:var(--primary); font-weight:800; cursor:pointer; text-decoration:underline; font-size:16px;">View full article</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h4>Network</h4>
+            <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
+            <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
+            <a href="rooms-in-financial-district-hyderabad.html">Financial District</a>
+        </div>
+        <div>
+            <h4>About</h4>
+            <a href="#vision">Our Vision</a>
+            <a href="#founder">Founder Story</a>
+            <a href="mailto:writeus@hydairbnb.shop">Write To Us</a>
+        </div>
+        <div>
+            <h4>Connect</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p style="margin-top:15px; color:#555;">Email: <a href="mailto:writeus@hydairbnb.shop" style="color:var(--primary); text-decoration:none;">writeus@hydairbnb.shop</a></p>
+        </div>
+    </div>
+    <p style="margin-top:50px; font-size:12px; opacity:0.3;">© 2026 HydAirbnb Property Management | Founded by P. Vinay Kumar Reddy</p>
+</footer>
+
+<div class="chat-btn" onclick="window.location.href='https://wa.me/919346573629'"><i class="fas fa-comment-dots"></i></div>
+
+<script>
+    function toggleStory() {
+        var x = document.getElementById("full-story");
+        var btn = document.getElementById("story-btn");
+        if (x.style.display === "none" || x.style.display === "") {
+            x.style.display = "block"; btn.innerHTML = "Read Less";
+        } else {
+            x.style.display = "none"; btn.innerHTML = "View full article";
+        }
+    }
+</script>
+
+</body>
+</html>
