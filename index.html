@@ -16,7 +16,6 @@
         * { box-sizing: border-box; scroll-behavior: smooth; }
         body { font-family: 'Montserrat', sans-serif; margin: 0; color: #333; line-height: 1.6; background: var(--bg); overflow-x: hidden; }
         
-        /* UNIVERSAL HEADER */
         nav { background: white; padding: 10px 5%; border-bottom: 1px solid #eee; position: sticky; top:0; z-index: 2000; }
         .nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
         .logo { color: var(--dark); font-size: 24px; font-weight: 800; text-decoration: none; }
@@ -29,23 +28,123 @@
         .location-menu a { text-decoration: none; color: #888; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
         .location-menu a:hover { color: var(--dark); }
 
-        /* HERO SECTION */
-        .hero-container { position: relative; height: 85vh; width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-        .bg-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -2; transform: translate(-50%, -50%); object-fit: cover; }
-        .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.65); z-index: -1; }
+        .hero-container { position: relative; height: 85vh; width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000; }
+        .bg-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -2; transform: translate(-50%, -50%); object-fit: cover; opacity: 0.6; }
+        .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.4); z-index: -1; }
         .hero-text { text-align: center; color: white; max-width: 900px; padding: 20px; z-index: 1; }
         .hero-text h1 { font-family: 'Playfair Display'; font-size: clamp(32px, 5vw, 65px); margin: 0; line-height: 1.1; font-weight: 900; }
-        .hero-text p { font-size: clamp(14px, 2vw, 18px); margin-top: 20px; opacity: 0.9; font-weight: 300; letter-spacing: 1px; }
-        .btn-main { background: var(--primary); color: white; padding: 18px 45px; border-radius: 4px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 35px; transition: 0.3s; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; }
+        .hero-text p { font-size: clamp(14px, 2vw, 18px); margin-top: 20px; opacity: 0.9; font-weight: 300; }
+        .btn-main { background: var(--primary); color: white; padding: 18px 45px; border-radius: 4px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 35px; transition: 0.3s; text-transform: uppercase; font-size: 14px; }
         .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,56,92,0.4); }
 
-        /* STATS BAR */
         .stats-bar { background: var(--dark); color: white; padding: 60px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center; gap: 30px; }
         .stat-item h2 { color: var(--primary); font-size: 45px; margin: 0; font-family: 'Playfair Display'; }
-        .stat-item p { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; margin-top: 10px; }
+        .stat-item p { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; }
 
-        /* VALUE SECTION (THE CONVERSION ENGINE) */
-        .value-section { padding: 100px 8%; max-width: 1400px; margin: auto; }
+        .value-section { padding: 80px 8%; max-width: 1400px; margin: auto; }
         .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; }
         .value-card h3 { font-family: 'Playfair Display'; font-size: 28px; margin-bottom: 20px; position: relative; padding-bottom: 15px; }
-        .value-card h3::after { content: ''; position: absolute; bottom: 0; left: 0; width:
+        .value-card h3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: var(--primary); }
+        .value-link { color: var(--primary); font-weight: 800; text-decoration: none; font-size: 13px; text-transform: uppercase; }
+
+        footer { background: var(--dark); color: #fff; padding: 80px 5% 50px; margin-top: 50px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; max-width: 1200px; margin: auto; }
+        .footer-grid h4 { font-family: 'Playfair Display'; font-size: 20px; margin-bottom: 25px; color: var(--primary); }
+        .footer-grid a { display: block; color: #999; text-decoration: none; margin-bottom: 12px; font-size: 14px; }
+        .social-icons a { display: inline-block; color: white; font-size: 24px; margin-right: 25px; }
+        
+        .whatsapp-float { position: fixed; bottom: 35px; right: 35px; background: var(--success); width: 65px; height: 65px; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 32px; color: white; z-index: 3000; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-top">
+        <a href="index.html" class="logo">Hyd<span>Airbnb</span></a>
+        <div class="main-menu">
+            <a href="how-it-works-property-owners.html">How It Works</a>
+            <a href="trust-and-safety-hyderabad.html">Trust & Safety</a>
+            <a href="connect-hydairbnb.html">Contact Us</a>
+        </div>
+    </div>
+    <div class="location-menu">
+        <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
+        <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
+        <a href="rooms-in-financial-district-hyderabad.html">Financial District</a>
+        <a href="rooms-in-madhapur-kondapur-hyderabad.html">Madhapur</a>
+    </div>
+</nav>
+
+<div class="hero-container">
+    <video autoplay loop muted playsinline class="bg-video">
+        <source src="https://cdn.pixabay.com/video/2021/08/21/85848-591745423_large.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+        <h1>Earn 3X More Than Rent <br>In Hyderabad</h1>
+        <p>100% Managed Portfolio. Verified Corporate Stays. Absolute Transparency.</p>
+        <a href="connect-hydairbnb.html" class="btn-main">Partner With Us</a>
+    </div>
+</div>
+
+<section class="stats-bar">
+    <div class="stat-item"><h2>100+</h2><p>Managed Properties</p></div>
+    <div class="stat-item"><h2>4500+</h2><p>Bookings</p></div>
+    <div class="stat-item"><h2>2.8X</h2><p>Yield Increase</p></div>
+</section>
+
+<section class="value-section">
+    <div class="value-grid">
+        <div class="value-card">
+            <h3>For Property Owners</h3>
+            <p>Traditional rentals are outdated. We leverage data-driven pricing to triple your yield while keeping your asset in showroom condition.</p>
+            <a href="how-it-works-property-owners.html" class="value-link">Learn The Process →</a>
+            <br><br>
+            <a href="top-gated-communities-hyderabad-it-corridor.html" class="value-link" style="color: var(--dark); font-size: 11px; border-bottom: 1px solid var(--primary); padding-bottom: 2px;">
+                <i class="fas fa-city"></i> View Our Gated Community Guide
+            </a>
+        </div>
+        <div class="value-card">
+            <h3>For Corporate Guests</h3>
+            <p>Relocating for Google or Amazon? Our verified rooms offer 500Mbps WiFi, GST invoicing, and prime locations within 5 mins of tech parks.</p>
+            <a href="best-stays-for-google-amazon-employees-hyderabad.html" class="value-link">Explore The Guide →</a>
+        </div>
+        <div class="value-card">
+            <h3>Local Responsibility</h3>
+            <p>Managed by P. Vinay Kumar Reddy. We are responsible local partners ensuring strict compliance with society bylaws.</p>
+            <a href="trust-and-safety-hyderabad.html" class="value-link">Our Safety Promise →</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h4>Company</h4>
+            <a href="index.html">Home</a>
+            <a href="how-it-works-property-owners.html">How It Works</a>
+            <a href="trust-and-safety-hyderabad.html">Trust & Safety</a>
+        </div>
+        <div>
+            <h4>Locations</h4>
+            <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
+            <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
+            <a href="rooms-in-financial-district-hyderabad.html">Financial District</a>
+        </div>
+        <div>
+            <h4>Connect</h4>
+            <a href="mailto:writeus@hydairbnb.shop" style="color:var(--primary); text-decoration: none;">writeus@hydairbnb.shop</a>
+            <div class="social-icons" style="margin-top:20px;">
+                <a href="https://wa.me/919346573629"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 50px; font-size: 11px; opacity: 0.4;">© 2026 HYDAIRBNB | MANAGED BY P. VINAY KUMAR REDDY</p>
+</footer>
+
+<a href="https://wa.me/919346573629" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+</body>
+</html>
