@@ -3,84 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rooms in Hitech City | Managed by HydAirbnb Hyderabad</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Premium Rooms in Hitech City | HydAirbnb Luxury Collection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #ff385c; --dark: #0a0a0a; --success: #25D366; --bg: #ffffff; }
-        * { box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--bg); color: #333; line-height: 1.6; }
-        nav { background: white; padding: 10px 5%; border-bottom: 1px solid #eee; position: sticky; top:0; z-index: 2000; }
-        .nav-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        :root { --primary: #ff385c; --dark: #0a0a0a; --bg: #ffffff; --grey: #f8f9fa; }
+        body { font-family: 'Inter', sans-serif; margin: 0; color: #1a1a1a; background: var(--bg); }
+        nav { background: white; padding: 15px 5%; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; position: sticky; top:0; z-index: 1000; }
         .logo { color: var(--dark); font-size: 22px; font-weight: 800; text-decoration: none; }
         .logo span { color: var(--primary); }
-        .location-menu { display: flex; gap: 20px; justify-content: center; border-top: 1px solid #f5f5f5; padding-top: 10px; flex-wrap: wrap; }
-        .location-menu a { text-decoration: none; color: #666; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-        .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1500'); height: 300px; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
-        .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #eee; }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-content { padding: 20px; }
-        .card-content h3 { font-family: 'Playfair Display'; margin: 0 0 10px 0; }
-        .btn-book { background: var(--primary); color: white; text-decoration: none; display: block; text-align: center; padding: 12px; border-radius: 6px; font-weight: 800; margin-top: 15px; }
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--success); width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; z-index: 3000; box-shadow: 0 10px 25px rgba(0,0,0,0.2); text-decoration: none; }
-        .consult-btn { position: fixed; bottom: 30px; left: 30px; background: var(--dark); color: white; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 12px; z-index: 3000; box-shadow: 0 10px 25px rgba(0,0,0,0.2); letter-spacing: 1px; }
-        footer { background: var(--dark); color: #888; padding: 80px 5%; text-align: center; }
-        .social-icons { margin-bottom: 30px; }
-        .social-icons a { color: white; font-size: 28px; margin: 0 15px; text-decoration: none; }
-        .footer-mail { color: white; text-decoration: none; font-weight: 600; font-size: 18px; display: block; margin-top: 10px; }
+        header { padding: 80px 5%; text-align: center; background: var(--grey); border-bottom: 1px solid #eee; }
+        header h1 { font-family: 'Playfair Display'; font-size: 42px; margin: 0; color: var(--dark); }
+        .container { max-width: 1200px; margin: auto; padding: 60px 20px; }
+        .property-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .card { border-radius: 15px; overflow: hidden; border: 1px solid #eee; transition: 0.3s; position: relative; background: white; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .card img { width: 100%; height: 250px; object-fit: cover; }
+        .card-content { padding: 25px; }
+        .card-content h3 { font-family: 'Playfair Display'; font-size: 22px; margin: 0 0 10px; }
+        .price { font-weight: 800; font-size: 18px; color: var(--dark); margin-bottom: 20px; }
+        .estimate-bar { background: var(--dark); color: white; padding: 40px; border-radius: 15px; text-align: center; margin-top: 60px; }
+        .btn-estimate { background: var(--primary); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 20px; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; }
+        footer { background: #000; color: #888; padding: 60px 5%; text-align: center; margin-top: 80px; }
     </style>
 </head>
 <body>
 <nav>
-    <div class="nav-top"><a href="index.html" class="logo">Hyd<span>Airbnb</span></a><div style="font-weight: 800; font-size: 14px;">+91 9346573629</div></div>
-    <div class="location-menu">
-        <a href="rooms-in-hitech-city-hyderabad.html" style="color:var(--primary)">Hitech City</a>
-        <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
-        <a href="rooms-in-financial-district-hyderabad.html">Financial District</a>
-        <a href="rooms-in-madhapur-kondapur-hyderabad.html">Madhapur</a>
-    </div>
+    <a href="index.html" class="logo">Hyd<span>Airbnb</span></a>
+    <a href="connect-hydairbnb.html" style="color: var(--primary); font-weight: 800; text-decoration: none; font-size: 13px; letter-spacing: 1px;">FREE ESTIMATE</a>
 </nav>
-<div class="hero"><h1>Rooms in Hitech City</h1></div>
+<header>
+    <h1>Hitech City Collection</h1>
+    <p>Walkable to Mindspace, Cyber Towers, and Phoenix Avance</p>
+</header>
 <div class="container">
-    <div class="card"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600">
-        <div class="card-content"><h3>Executive 1BHK</h3><p>Perfect for corporate solo travelers near Mindspace.</p><a href="connect-hydairbnb.html" class="btn-book">Check Availability</a></div>
-    </div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600">
-        <div class="card-content"><h3>Premium 2BHK</h3><p>Walkable to Cyber Towers. Fully managed with high-speed WiFi.</p><a href="connect-hydairbnb.html" class="btn-book">Check Availability</a></div>
-    </div>
-</div>
-<a href="https://wa.me/919346573629" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
-<a href="connect-hydairbnb.html" class="consult-btn">BOOK FREE CONSULTATION</a>
-<footer>
-    <div class="footer-grid">
-        <div>
-            <h4>Company</h4>
-            <a href="index.html">Home</a>
-            <a href="how-it-works-property-owners.html">How It Works</a>
-            <a href="trust-and-safety-hyderabad.html">Trust & Safety</a>
-            <a href="connect-hydairbnb.html">Book a Stay</a>
+    <div class="property-grid">
+        <div class="card">
+            <img src="flat.1jpg.jfif" alt="Hitech City Suite">
+            <div class="card-content">
+                <h3>Mindspace Executive Suite</h3>
+                <p>📍 2 Mins from Mindspace IT Park</p>
+                <div class="price">₹3,000 <span>/ night</span></div>
+                <a href="connect-hydairbnb.html" style="color: var(--primary); font-weight: 800; text-decoration: none;">CHECK AVAILABILITY →</a>
+            </div>
         </div>
-        <div>
-            <h4>Locations</h4>
-            <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
-            <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
-            <a href="rooms-in-financial-district-hyderabad.html">Financial District</a>
-            <a href="rooms-in-madhapur-kondapur-hyderabad.html">Madhapur</a>
-        </div>
-        <div>
-            <h4>Connect</h4>
-            <p style="color:#888; font-size:14px;">Questions? Reach out to us directly.</p>
-            <a href="mailto:writeus@hydairbnb.shop" style="font-weight:700; color:var(--primary);">writeus@hydairbnb.shop</a>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <div class="card">
+            <img src="flat.2.jpg" alt="Hitech City Loft">
+            <div class="card-content">
+                <h3>Cyber Towers Modern Loft</h3>
+                <p>📍 Steps away from Hitech City Metro</p>
+                <div class="price">₹2,500 <span>/ night</span></div>
+                <a href="connect-hydairbnb.html" style="color: var(--primary); font-weight: 800; text-decoration: none;">CHECK AVAILABILITY →</a>
             </div>
         </div>
     </div>
-    <p style="margin-top:60px; font-size:11px; opacity:0.4;">© 2026 HydAirbnb | Managed by P. Vinay Kumar Reddy | Designed for 10k Growth</p>
-</footer>
+    <div class="estimate-bar">
+        <h2 style="font-family: 'Playfair Display';">Own a property in Hitech City?</h2>
+        <p style="opacity: 0.8;">Maximize your rental yield with premium corporate management.</p>
+        <a href="connect-hydairbnb.html" class="btn-estimate">Get a Free Revenue Estimate</a>
+    </div>
+</div>
+<footer><p>© 2026 HYDAIRBNB | MANAGED BY P. VINAY KUMAR REDDY</p></footer>
 </body>
 </html>
