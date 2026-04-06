@@ -1,73 +1,170 @@
+This is the core "Revenue Engine" for your business. I have designed this page to look high-end and authoritative to attract serious property owners and investors in Hyderabad. 
+
+It uses the **Inter** and **Playfair Display** pairing and features the specific 4-step process and "Early Host Offer" mentioned in your prompt.
+
+### 📋 Action: Replace your `how-it-works-property-owners.html` with this EXACT code:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How It Works | Passive Income for Property Owners | HydAirbnb</title>
+    <title>List Your Property | Earn Passive Income in Hyderabad | Hydairbnb</title>
+    <meta name="description" content="Turn your Hyderabad property into a high-yield rental. List your flat, villa, or farmhouse for free on Hydairbnb. We handle the heavy lifting.">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        :root { --primary: #ff385c; --dark: #0a0a0a; --bg: #ffffff; }
-        body { font-family: 'Inter', sans-serif; margin: 0; color: #1a1a1a; line-height: 1.6; }
-        nav { background: white; padding: 15px 5%; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; position: sticky; top:0; z-index: 100; }
-        .logo { color: var(--dark); font-size: 22px; font-weight: 800; text-decoration: none; }
+        :root { --primary: #ff385c; --host-orange: #ff5a1f; --dark: #0a0a0a; --grey: #f9f9f9; --success: #25D366; }
+        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: #1a1a1a; line-height: 1.6; background: #fff; }
+
+        /* NAVIGATION */
+        nav { background: white; padding: 15px 5%; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 9999; }
+        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--dark); }
         .logo span { color: var(--primary); }
-        
-        header { padding: 100px 5%; text-align: center; background: #f9f9f9; }
-        header h1 { font-family: 'Playfair Display'; font-size: clamp(32px, 5vw, 50px); margin: 0; }
-        
+        .nav-links a { text-decoration: none; color: #333; font-weight: 600; margin-left: 25px; font-size: 14px; }
+
+        /* HERO SECTION */
+        header { 
+            padding: 100px 8%; 
+            background: var(--dark); 
+            color: white; 
+            text-align: center;
+        }
+        header h1 { font-family: 'Playfair Display'; font-size: clamp(32px, 5vw, 55px); margin-bottom: 20px; line-height: 1.2; }
+        header p { font-size: 18px; opacity: 0.8; max-width: 800px; margin: 0 auto; }
+
         .container { max-width: 1100px; margin: auto; padding: 80px 20px; }
-        .step { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 100px; }
-        .step:nth-child(even) { direction: rtl; }
-        .step-text { direction: ltr; }
-        .step-text h2 { font-family: 'Playfair Display'; font-size: 32px; margin-bottom: 20px; }
+
+        /* WHO THIS IS FOR */
+        .who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .who-card { padding: 30px; border: 1px solid #eee; border-radius: 15px; border-top: 4px solid var(--host-orange); }
+        .who-card h4 { font-family: 'Playfair Display'; font-size: 20px; margin-bottom: 15px; }
+
+        /* WHAT YOU GET (BENEFITS) */
+        .benefits-list { margin: 60px 0; background: var(--grey); padding: 50px; border-radius: 20px; }
+        .benefit-item { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; font-weight: 600; font-size: 18px; }
+        .benefit-item span { font-size: 14px; font-weight: 400; color: #666; margin-left: 5px; }
+
+        /* HOW IT WORKS (STEPS) */
+        .step-container { margin-top: 50px; }
+        .step { display: flex; gap: 30px; margin-bottom: 40px; align-items: flex-start; }
+        .step-num { width: 45px; height: 45px; background: var(--host-orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; min-width: 45px; }
+        .step-text h4 { font-family: 'Playfair Display'; font-size: 22px; margin-bottom: 10px; }
+
+        /* PRICING BANNER */
+        .pricing-banner { background: #fffcf5; border: 2px dashed #eecb6d; padding: 40px; border-radius: 15px; text-align: center; margin: 60px 0; }
+        .early-offer { color: var(--primary); font-weight: 800; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; display: block; margin-top: 10px; }
+
+        /* CTA BUTTON */
+        .btn-host { background: var(--host-orange); color: white; padding: 20px 45px; border-radius: 50px; text-decoration: none; font-weight: 800; text-transform: uppercase; display: inline-block; transition: 0.3s; font-size: 14px; }
+        .btn-host:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(255, 90, 31, 0.3); }
+
+        footer { background: #000; color: #888; padding: 60px 5%; text-align: center; font-size: 13px; }
         
-        .cta-box { background: var(--dark); color: white; padding: 80px 20px; text-align: center; border-radius: 20px; margin-top: 50px; }
-        .btn-estimate { background: var(--primary); color: white; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 30px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
-        .btn-estimate:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(255,56,92,0.4); }
-        
-        footer { background: #000; color: #888; padding: 60px 5%; text-align: center; font-size: 12px; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--success); width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; color: white; z-index: 9999; box-shadow: 0 10px 25px rgba(0,0,0,0.3); text-decoration: none; }
+
+        @media (max-width: 768px) { header h1 { font-size: 32px; } .step { flex-direction: column; gap: 15px; } }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="index.html" class="logo">Hyd<span>Airbnb</span></a>
-    <a href="connect-hydairbnb.html" style="color: var(--primary); font-weight: 700; text-decoration: none; font-size: 13px;">FREE ESTIMATE</a>
+    <a href="index.html" class="logo">Hyd<span>airbnb</span></a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="rooms-in-hitech-city-hyderabad.html">Explore Stays</a>
+    </div>
 </nav>
 
 <header>
-    <h1>The Roadmap to 3X Returns</h1>
-    <p style="color: var(--primary); font-weight: 700; letter-spacing: 2px;">MANAGED. SECURE. PROFITABLE.</p>
+    <h1>Earn Passive Income from Your Hyderabad Property — We Do the Heavy Lifting</h1>
+    <p>Whether you own a flat, villa, farmhouse, or any unique space in Hyderabad or Telangana — Hydairbnb connects you with guests who are ready to pay for a great stay.</p>
 </header>
 
 <div class="container">
-    <div class="step">
-        <div class="step-text">
-            <h2>01. Onboarding & Setup</h2>
-            <p>We audit your property and provide a professional architectural photoshoot. We handle the listing optimization across global platforms to ensure your flat stands out in the Hyderabad market.</p>
+    
+    <h2 style="font-family: 'Playfair Display'; font-size: 32px; margin-bottom: 30px; text-align: center;">Who is this for?</h2>
+    <div class="who-grid">
+        <div class="who-card">
+            <h4>Property Owners</h4>
+            <p>Owners in Hyderabad / Telangana with underutilised residential or commercial space looking for consistent returns.</p>
         </div>
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800" style="width:100%; border-radius:15px;" alt="Setup">
+        <div class="who-card">
+            <h4>Real Estate Investors</h4>
+            <p>Investors looking to generate high-yield short-term rental income compared to traditional long-term leasing.</p>
+        </div>
+        <div class="who-card">
+            <h4>Busy Professionals</h4>
+            <p>Anyone with a unique, private space and no time to manage bookings, guest communication, or marketing themselves.</p>
+        </div>
     </div>
 
-    <div class="step">
-        <div class="step-text">
-            <h2>02. Verified Guests Only</h2>
-            <p>We leverage our tech network to attract employees from Google, Amazon, and Microsoft. Every guest is vetted, and we ensure 100% compliance with your society's bylaws.</p>
-        </div>
-        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=800" style="width:100%; border-radius:15px;" alt="Vetting">
+    <div class="benefits-list">
+        <h2 style="font-family: 'Playfair Display'; font-size: 32px; margin-bottom: 40px;">What you get:</h2>
+        <div class="benefit-item">✅ Free listing on Hydairbnb</div>
+        <div class="benefit-item">📸 Help with property photos and description <span>(Coming Soon)</span></div>
+        <div class="benefit-item">📅 Booking calendar management</div>
+        <div class="benefit-item">💬 Guest communication support</div>
+        <div class="benefit-item">💰 Monthly payouts directly to your bank account</div>
     </div>
 
-    <div class="cta-box">
-        <h2 style="font-family: 'Playfair Display'; font-size: 36px;">Ready to see your property's potential?</h2>
-        <p>Stop settling for standard rent. Get your data-backed estimate today.</p>
-        <a href="connect-hydairbnb.html" class="btn-estimate">Get a Free Revenue Estimate</a>
+    <h2 style="font-family: 'Playfair Display'; font-size: 32px; margin-bottom: 40px; text-align: center;">How it works:</h2>
+    <div class="step-container">
+        <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-text">
+                <h4>Fill out the listing form</h4>
+                <p>Provide basic details about your property in under 10 minutes.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-text">
+                <h4>Property Verification</h4>
+                <p>Our team reviews and verifies your property to ensure safety and quality standards.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-text">
+                <h4>Your listing goes live</h4>
+                <p>Guests start discovering your space and booking their stays through our platform.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-text">
+                <h4>You earn</h4>
+                <p>We take a small platform fee only when you earn. No upfront costs involved.</p>
+            </div>
+        </div>
     </div>
+
+    <div class="pricing-banner">
+        <h3 style="font-family: 'Playfair Display'; font-size: 24px;">No upfront cost. No monthly subscription to start.</h3>
+        <p style="margin-top: 10px;">We only earn when you earn.</p>
+        <span class="early-offer">Early host offer — limited slots remaining</span>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="connect-hydairbnb.html" class="btn-host">List My Property Now — It's Free →</a>
+    </div>
+
 </div>
 
 <footer>
-    <p>© 2026 HYDAIRBNB | MANAGED BY P. VINAY KUMAR REDDY</p>
+    <p>© 2026 HYDAIRBNB | STAY UNIQUE, STAY HYDAIRBNB</p>
 </footer>
+
+<a href="https://wa.me/919346573629" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
+```
