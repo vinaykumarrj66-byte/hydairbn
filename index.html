@@ -3,149 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HydAirbnb | Verified Stays in Hyderabad's Best Gated Communities</title>
+    
+    <title>Hydairbnb | Unique Stays & Property Management Hyderabad</title>
+    <meta name="description" content="Find private villas and farmhouses in Hyderabad or list your property for passive income. Verified, hassle-free, and handpicked stays by P. Vinay Kumar Reddy.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgency",
+      "name": "Hydairbnb",
+      "url": "https://hydairbnb.shop",
+      "logo": "https://hydairbnb.shop/logo.png",
+      "telephone": "+919346573629",
+      "priceRange": "₹2000-₹15000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "IT Corridor",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500032",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        :root { --primary: #ff385c; --trust: #00a699; --bg: #f7f7f7; --dark: #222; }
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; background: var(--bg); color: var(--dark); line-height: 1.6; }
+        :root { --primary: #ff385c; --host-orange: #ff5a1f; --dark: #0a0a0a; --grey: #f7f7f7; --success: #25D366; }
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; margin: 0; color: #1a1a1a; line-height: 1.6; overflow-x: hidden; }
+
+        /* NAV */
+        nav { background: white; padding: 15px 5%; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; position: sticky; top:0; z-index: 2000; }
+        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: var(--dark); }
+        .logo span { color: var(--primary); }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 600; margin-left: 25px; font-size: 14px; }
+
+        /* HERO - PARALLAX */
+        .hero { 
+            height: 85vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=2000');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+        }
+        .hero h1 { font-family: 'Playfair Display'; font-size: clamp(32px, 6vw, 65px); margin: 0; line-height: 1.1; }
+        .hero p { font-size: clamp(16px, 2vw, 20px); margin: 25px 0 40px; opacity: 0.9; max-width: 800px; }
+        .cta-group { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .btn { padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 13px; transition: 0.3s; }
+        .btn-guest { background: var(--primary); color: white; }
+        .btn-host { background: var(--host-orange); color: white; }
+        .btn:hover { transform: scale(1.05); filter: brightness(1.1); }
+
+        /* SOCIAL PROOF */
+        .proof-bar { background: white; padding: 25px 5%; display: flex; justify-content: center; gap: 40px; border-bottom: 1px solid #eee; flex-wrap: wrap; font-size: 12px; font-weight: 700; color: #666; letter-spacing: 1px; }
+        .proof-bar span { display: flex; align-items: center; gap: 8px; }
+        .proof-bar i { color: var(--success); }
+
+        /* WHY SECTION */
+        .section { padding: 100px 8%; max-width: 1400px; margin: auto; }
+        .section-title { font-family: 'Playfair Display'; font-size: 38px; text-align: center; margin-bottom: 60px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .benefit-card { padding: 40px; background: var(--grey); border-radius: 20px; transition: 0.3s; border: 1px solid transparent; }
+        .benefit-card:hover { border-color: var(--primary); background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .benefit-card i { font-size: 40px; color: var(--primary); margin-bottom: 20px; display: block; }
+        .benefit-card h3 { font-family: 'Playfair Display'; font-size: 24px; margin-bottom: 15px; }
+
+        /* HOW IT WORKS */
+        .how-it-works { background: var(--dark); color: white; padding: 100px 8%; text-align: center; }
+        .how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 60px; text-align: left; }
+        .how-column h3 { color: var(--primary); font-size: 28px; font-family: 'Playfair Display'; border-bottom: 1px solid #333; padding-bottom: 15px; margin-bottom: 30px; }
+        .step { margin-bottom: 30px; display: flex; gap: 20px; align-items: flex-start; }
+        .step-num { background: rgba(255,255,255,0.1); width: 40px; height: 40px; min-width: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; border: 1px solid var(--primary); }
+
+        /* HOST BANNER */
+        .host-banner { background: var(--host-orange); color: white; padding: 80px 5%; text-align: center; margin: 50px 0; border-radius: 20px; }
+
+        /* FOOTER */
+        footer { background: #000; color: #888; padding: 80px 5% 40px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 60px; }
+        .footer-grid h4 { color: white; margin-bottom: 25px; }
+        .footer-grid a { display: block; color: #888; text-decoration: none; margin-bottom: 12px; font-size: 14px; }
         
-        /* Top Trust Bar */
-        .trust-bar { background: var(--trust); color: white; text-align: center; padding: 8px; font-size: 13px; font-weight: bold; }
+        .whatsapp-float { position: fixed; bottom: 40px; right: 40px; background: var(--success); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; z-index: 3000; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
-        /* Premium Header & Nav */
-        nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; flex-wrap: wrap; }
-        .logo { color: var(--primary); font-size: 24px; font-weight: bold; text-decoration: none; margin-right: 20px; }
-        .nav-links { display: flex; gap: 15px; flex-wrap: wrap; }
-        .nav-links a { text-decoration: none; color: #444; font-weight: 500; font-size: 14px; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
-
-        .container { max-width: 1100px; margin: auto; padding: 20px; }
-
-        /* Hero Section */
-        .hero { background: white; padding: 60px 20px; text-align: center; border-bottom: 1px solid #eee; }
-        .hero h1 { font-size: 32px; margin: 0; color: #222; }
-
-        /* Property Cards */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 30px; }
-        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: 0.3s; position: relative; }
-        .card:hover { transform: translateY(-5px); }
-        .card img { width: 100%; height: 230px; object-fit: cover; }
-        .card-content { padding: 20px; }
-        .verified-badge { position: absolute; top: 15px; left: 15px; background: white; color: var(--trust); padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-
-        /* Community Guide Table */
-        .community-section { background: white; padding: 30px; border-radius: 15px; margin-top: 40px; border: 1px solid #eee; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        table th, table td { text-align: left; padding: 12px; border-bottom: 1px solid #eee; font-size: 14px; }
-        table th { background: #f9f9f9; color: var(--primary); }
-
-        /* Buttons */
-        .btn { display: block; text-align: center; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px; }
-        .btn-whatsapp { background: #25D366; color: white; }
-        .btn-outline { border: 2px solid var(--primary); color: var(--primary); }
-
-        footer { background: var(--dark); color: white; padding: 50px 20px; text-align: center; margin-top: 60px; }
+        @media (max-width: 768px) { .how-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 36px; } }
     </style>
 </head>
 <body>
 
-<div class="trust-bar">✓ Professional Hosting | Zero Hidden Costs | Safe for Families & Solo Travelers</div>
-
 <nav>
-    <a href="index.html" class="logo">HydAirbnb</a>
+    <a href="index.html" class="logo">Hyd<span>airbnb</span></a>
     <div class="nav-links">
-        <a href="rooms-in-hitech-city-hyderabad.html">Hitech City</a>
-        <a href="rooms-in-gachibowli-hyderabad.html">Gachibowli</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#trust-safety">Trust & Safety</a>
-        <a href="https://wa.me/919346573629?text=I want to partner with HydAirbnb" style="color: var(--trust); font-weight: bold;">Partner With Us</a>
+        <a href="#explore">Explore</a>
+        <a href="#how">How It Works</a>
+        <a href="how-it-works-property-owners.html" style="color: var(--host-orange);">List Property</a>
     </div>
 </nav>
 
-<header class="hero">
-    <h1>Your Trusted Stay in Hyderabad</h1>
-    <p>Hand-picked apartments in the city's most secure gated communities.</p>
-</header>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Find Unique Stays in Hyderabad — <br>Private, Hassle-Free & Handpicked</h1>
+        <p>From cozy villas to private farmhouses — Hydairbnb brings you the best short-stay properties in Hyderabad and Telangana, with zero compromise on privacy.</p>
+        <div class="cta-group">
+            <a href="rooms-in-hitech-city-hyderabad.html" class="btn btn-guest">Explore Stays</a>
+            <a href="how-it-works-property-owners.html" class="btn btn-host">List Your Property — Free</a>
+        </div>
+    </div>
+</section>
+
+<div class="proof-bar">
+    <span><i class="fas fa-check-circle"></i> VERIFIED PROPERTIES</span>
+    <span><i class="fas fa-lock"></i> 100% PRIVACY GUARANTEED</span>
+    <span><i class="fas fa-handshake"></i> HASSLE-FREE FOR HOSTS</span>
+    <span><i class="fas fa-map-marker-alt"></i> HYDERABAD & TELANGANA</span>
+</div>
+
+<section class="section">
+    <h2 class="section-title">Why Hydairbnb?</h2>
+    <div class="grid-3">
+        <div class="benefit-card">
+            <i class="fas fa-home"></i>
+            <h3>Stays That Feel Like Home</h3>
+            <p>No crowded hotels. Choose from private villas and farmhouses curated just for you. Perfect for couples and families who want comfort.</p>
+        </div>
+        <div class="benefit-card">
+            <i class="fas fa-hand-holding-usd"></i>
+            <h3>Passive Income for Hosts</h3>
+            <p>Turn your flat or villa into an earning asset. We handle the visibility and management while you collect the returns.</p>
+        </div>
+        <div class="benefit-card">
+            <i class="fas fa-user-shield"></i>
+            <h3>Verified & Transparent</h3>
+            <p>Manual verification for every listing. No hidden fees or surprises. Real pricing, real reviews, real trust.</p>
+        </div>
+    </div>
+</section>
+
+<section class="how-it-works" id="how">
+    <h2 class="section-title" style="color:white">How It Works</h2>
+    <div class="how-grid">
+        <div class="how-column">
+            <h3>For Guests</h3>
+            <div class="step"><div class="step-num">1</div><p>Browse handpicked properties in Hyderabad</p></div>
+            <div class="step"><div class="step-num">2</div><p>Pick your dates and book instantly</p></div>
+            <div class="step"><div class="step-num">3</div><p>Check in, enjoy, and share your story</p></div>
+        </div>
+        <div class="how-column">
+            <h3>For Hosts</h3>
+            <div class="step"><div class="step-num">1</div><p>List your property for free in <10 mins</p></div>
+            <div class="step"><div class="step-num">2</div><p>We verify and publish your listing</p></div>
+            <div class="step"><div class="step-num">3</div><p>Start earning — we handle the bookings</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="explore">
+    <h2 class="section-title">Handpicked Stays in Hyderabad</h2>
+    <p style="text-align: center; margin-top: -40px; color: #666;">Each property is personally reviewed. No spam listings.</p>
+    <div class="grid-3" style="margin-top: 50px;">
+        <div class="benefit-card" style="padding: 0; overflow: hidden; background: white; border: 1px solid #eee;">
+            <img src="flat.1jpg.jfif" style="width:100%; height:200px; object-fit: cover;">
+            <div style="padding: 20px;">
+                <p style="font-size: 11px; font-weight: 800; color: var(--primary);">FINANCIAL DISTRICT</p>
+                <h4 style="margin: 5px 0;">Executive Corporate Suite</h4>
+                <p style="font-size: 13px; color: #777;">Starting at ₹2,800/night</p>
+                <a href="connect-hydairbnb.html" style="color: var(--dark); font-weight: 800; text-decoration: none; font-size: 12px;">BOOK NOW →</a>
+            </div>
+        </div>
+        <div class="benefit-card" style="padding: 0; overflow: hidden; background: white; border: 1px solid #eee;">
+            <img src="flat.2.jpg" style="width:100%; height:200px; object-fit: cover;">
+            <div style="padding: 20px;">
+                <p style="font-size: 11px; font-weight: 800; color: var(--primary);">HITECH CITY</p>
+                <h4 style="margin: 5px 0;">Modern Studio Loft</h4>
+                <p style="font-size: 13px; color: #777;">Starting at ₹2,200/night</p>
+                <a href="connect-hydairbnb.html" style="color: var(--dark); font-weight: 800; text-decoration: none; font-size: 12px;">BOOK NOW →</a>
+            </div>
+        </div>
+        <div class="benefit-card" style="display: flex; align-items: center; justify-content: center; text-align: center; background: #fffcf5; border: 2px dashed #eecb6d;">
+            <div>
+                <h4>New listings weekly</h4>
+                <p style="font-size: 13px;">Join our waitlist for early access.</p>
+                <a href="connect-hydairbnb.html" style="color: var(--primary); font-weight: 800;">JOIN NOW</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <div class="container">
-
-    <div class="grid">
-        <div class="card">
-            <div class="verified-badge">✓ HYDAIRBNB VERIFIED</div>
-            <img src="http://googleusercontent.com/image_collection/image_retrieval/3892261055619951380_0" alt="Executive Stay Hitech City">
-            <div class="card-content">
-                <h3>Executive Suite - Hitech City</h3>
-                <p>📍 Near Cyber Towers & Mindspace<br>🏠 Gated Community | 24/7 Security</p>
-                <div style="font-size: 22px; font-weight: bold; margin: 15px 0;">₹1,500 <span style="font-size: 14px; font-weight: normal;">/ night</span></div>
-                <a href="https://wa.me/919346573629?text=I'm interested in the Hitech City Suite" class="btn btn-whatsapp">Book via WhatsApp</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="verified-badge">✓ HYDAIRBNB VERIFIED</div>
-            <img src="http://googleusercontent.com/image_collection/image_retrieval/12348060806287341375_0" alt="Premium Stay Gachibowli">
-            <div class="card-content">
-                <h3>Premium Studio - Gachibowli</h3>
-                <p>📍 Near DLF & Financial District<br>🛡️ Luxury Apartment | Gym & WiFi</p>
-                <div style="font-size: 22px; font-weight: bold; margin: 15px 0;">₹2,200 <span style="font-size: 14px; font-weight: normal;">/ night</span></div>
-                <a href="https://wa.me/919346573629?text=I'm interested in the Gachibowli Studio" class="btn btn-whatsapp">Book via WhatsApp</a>
-            </div>
-        </div>
+    <div class="host-banner">
+        <h2 style="font-family: 'Playfair Display';">Own a property in Hyderabad?</h2>
+        <p>Join hundreds of owners earning passive income with zero hassle. We handle the listings, you collect the income.</p>
+        <a href="how-it-works-property-owners.html" class="btn" style="background: white; color: var(--host-orange); margin-top: 20px; display: inline-block;">List My Property →</a>
     </div>
-
-    <div class="community-section">
-        <h2>Premium Gated Communities We Serve</h2>
-        <p>We provide exclusive stays in Hyderabad's most sought-after and secure societies:</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Community Name</th>
-                    <th>Location</th>
-                    <th>Highlight</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Rainbow Vistas</td><td>Moosapet/Hitech City</td><td>Lake View & Luxury</td></tr>
-                <tr><td>Aparna Cyberzone</td><td>Nallagandla</td><td>Peaceful & Professional</td></tr>
-                <tr><td>My Home Navadweep</td><td>Hitech City</td><td>Opposite Cyber Gateway</td></tr>
-                <tr><td>My Home Jewel</td><td>Madinaguda</td><td>Massive Greenery</td></tr>
-                <tr><td>Malaysian Township</td><td>KPHB</td><td>Heart of the City</td></tr>
-                <tr><td>Lanco Hills</td><td>Manikonda</td><td>High-rise Luxury</td></tr>
-                <tr><td>PBEL City</td><td>Appa Junction</td><td>Integrated Township</td></tr>
-                <tr><td>Aparna Sarovar</td><td>Nallagandla</td><td>Premium Amenities</td></tr>
-                <tr><td>My Home Abhra</td><td>Madapur</td><td>Ultra-Luxury</td></tr>
-                <tr><td>My Home Mangala</td><td>Kondapur</td><td>Brand New & Modern</td></tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div id="how-it-works" class="community-section">
-        <h2>How It Works</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center;">
-            <div><h3>1. Search</h3><p>Browse our verified listings in prime locations.</p></div>
-            <div><h3>2. WhatsApp</h3><p>Click the chat button to get real-time photos and availability.</p></div>
-            <div><h3>3. Confirm</h3><p>Receive your digital voucher and enjoy a safe, professional stay.</p></div>
-        </div>
-    </div>
-
-    <div id="trust-safety" class="community-section" style="border-left: 6px solid var(--trust);">
-        <h2>Trust & Safety</h2>
-        <p><strong>✓ Identity Verification:</strong> We only host verified guests for community safety.</p>
-        <p><strong>✓ Real Photos:</strong> What you see is what you get. 100% Transparency.</p>
-        <p><strong>✓ Professional Cleaning:</strong> Rooms are deep-cleaned after every check-out.</p>
-    </div>
-
 </div>
 
 <footer>
-    <p><strong>HydAirbnb Hyderabad</strong></p>
-    <p>Contact us: +91 9346573629</p>
-    <div style="margin-top: 20px;">
-        <a href="index.html" style="color: white; margin: 0 10px;">Home</a> | 
-        <a href="rooms-in-hitech-city-hyderabad.html" style="color: white; margin: 0 10px;">Hitech City</a> | 
-        <a href="rooms-in-gachibowli-hyderabad.html" style="color: white; margin: 0 10px;">Gachibowli</a>
+    <div class="footer-grid">
+        <div>
+            <h4>Hydairbnb</h4>
+            <a href="index.html">Home</a>
+            <a href="rooms-in-hitech-city-hyderabad.html">Explore Stays</a>
+            <a href="how-it-works-property-owners.html">List Your Property</a>
+        </div>
+        <div>
+            <h4>Support</h4>
+            <a href="trust-and-safety-hyderabad.html">Trust & Safety</a>
+            <a href="connect-hydairbnb.html">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div>
+            <h4>Follow Us</h4>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://wa.me/919346573629"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
     </div>
-    <p style="font-size: 12px; color: #888; margin-top: 30px;">© 2026 HydAirbnb. Building the most trusted rental network in Hyderabad.</p>
+    <div style="text-align: center; border-top: 1px solid #222; padding-top: 30px;">
+        <p style="font-size: 11px;">"Stay Unique, Stay Hydairbnb" | Designed for 10k Daily Growth</p>
+    </div>
 </footer>
+
+<a href="https://wa.me/919346573629" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 </body>
 </html>
