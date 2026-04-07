@@ -20,7 +20,6 @@
         .nav-links a { text-decoration: none; color: #333; font-weight: 600; margin-left: 25px; font-size: 14px; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary); }
 
-        /* --- VISUAL EFFECT 1: HERO MOTION (KEN BURNS) --- */
         .hero { 
             height: 90vh; 
             display: flex; 
@@ -29,8 +28,8 @@
             text-align: center;
             color: white;
             padding: 20px;
-            position: relative; /* Essential for masking motion */
-            overflow: hidden; /* Essential for masking motion */
+            position: relative;
+            overflow: hidden;
         }
 
         .hero-bg-container {
@@ -46,7 +45,6 @@
             background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=2000');
             background-size: cover;
             background-position: center;
-            /* --- VISUAL EFFECT 2: PARALLAX --- */
             background-attachment: fixed; 
         }
 
@@ -64,12 +62,10 @@
         .btn-orange { background: var(--host-orange); color: white; }
         .btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
-        /* SOCIAL PROOF BAR */
         .proof-bar { background: white; padding: 25px 5%; display: flex; justify-content: center; gap: 30px; border-bottom: 1px solid #eee; flex-wrap: wrap; font-size: 12px; font-weight: 700; color: #666; letter-spacing: 1px; }
         .proof-bar span { display: flex; align-items: center; gap: 8px; }
         .proof-bar i { color: var(--success); }
 
-        /* BENEFIT BLOCKS (EFFECT 3: HOVER TRANSITIONS) */
         .section { padding: 100px 8%; max-width: 1400px; margin: auto; }
         .section-title { font-family: 'Playfair Display'; font-size: 38px; text-align: center; margin-bottom: 60px; }
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
@@ -78,28 +74,23 @@
         .benefit-card i { font-size: 40px; color: var(--primary); margin-bottom: 20px; display: block; }
         .benefit-card h3 { font-family: 'Playfair Display'; font-size: 24px; margin-bottom: 15px; }
 
-        /* HOW IT WORKS */
         .how-section { background: var(--dark); color: white; padding: 100px 8%; }
         .how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 50px; }
         .how-column h3 { font-family: 'Playfair Display'; font-size: 28px; margin-bottom: 35px; color: var(--primary); }
         .step { margin-bottom: 25px; display: flex; gap: 20px; }
         .step-num { color: var(--primary); font-weight: 800; font-size: 20px; }
 
-        /* PROPERTY CARDS */
         .prop-card { border-radius: 15px; overflow: hidden; border: 1px solid #eee; background: white; transition: 0.3s; }
         .prop-card:hover { transform: translateY(-10px); }
         .prop-card img { width: 100%; height: 230px; object-fit: cover; }
         .prop-info { padding: 25px; }
 
-        /* BLOG SECTION (EFFECT 3: HOVER TRANSITIONS) */
         .blog-card { background: white; border: 1px solid #eee; border-radius: 15px; padding: 25px; transition: 0.3s; text-decoration: none; display: block; }
         .blog-card:hover { border-color: var(--primary); transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         .blog-card h4 { font-family: 'Playfair Display'; font-size: 20px; margin-bottom: 15px; color: var(--dark); }
 
-        /* HOST BANNER */
         .host-cta { background: var(--host-orange); color: white; padding: 80px 10%; text-align: center; border-radius: 20px; margin: 60px 5%; }
 
-        /* FOOTER */
         footer { background: #000; color: #fff; padding: 80px 5% 40px; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 40px; border-bottom: 1px solid #222; padding-bottom: 50px; }
         .footer-grid a { color: #888; text-decoration: none; display: block; margin-bottom: 12px; font-size: 14px; transition: 0.3s; }
@@ -108,7 +99,7 @@
         
         .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--success); width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; color: white; z-index: 9999; box-shadow: 0 10px 25px rgba(0,0,0,0.3); text-decoration: none; }
 
-        @media (max-width: 768px) { .how-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 38px; } .hero-bg { background-attachment: scroll; } } /* Parallax is often disabled on mobile for performance */
+        @media (max-width: 768px) { .how-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 38px; } .hero-bg { background-attachment: scroll; } }
     </style>
 </head>
 <body>
@@ -145,23 +136,41 @@
     <span><i class="fas fa-map-marker-alt"></i> Hyderabad & Telangana</span>
 </div>
 
+<section class="section" style="background: #fff8f9; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+    <h2 class="section-title">Why Our Location is Perfect</h2>
+    <div class="grid-3" style="text-align: left;">
+        <div>
+            <h4 style="color: var(--primary); margin-bottom: 10px;"><i class="fas fa-building"></i> Corporate Hubs</h4>
+            <p>• Google/Amazon: 10 mins<br>• DLF Cyber City: 8 mins<br>• Mindspace: 5 mins</p>
+        </div>
+        <div>
+            <h4 style="color: var(--primary); margin-bottom: 10px;"><i class="fas fa-train"></i> Travel & Food</h4>
+            <p>• Hitech City Metro: 5 mins walk<br>• IKEA: 12 mins drive<br>• Sarath City Mall: 10 mins</p>
+        </div>
+        <div>
+            <h4 style="color: var(--primary); margin-bottom: 10px;"><i class="fas fa-shield-alt"></i> Secure Communities</h4>
+            <p>Serving top societies: Rainbow Vistas, Aparna Cyberzone, My Home Jewel, Lanco Hills & more.</p>
+        </div>
+    </div>
+</section>
+
 <section class="section">
     <h2 class="section-title">Why Hydairbnb?</h2>
     <div class="grid-3">
         <div class="benefit-card">
             <i class="fas fa-home"></i>
-            <h3>Stays That Feel Like Home (But Better)</h3>
+            <h3>Stays That Feel Like Home</h3>
             <p>No crowded hotels. No shared lobbies. Choose from private villas, farmhouses, and unique properties.</p>
         </div>
         <div class="benefit-card">
             <i class="fas fa-hand-holding-usd"></i>
-            <h3>Passive Income for Property Owners</h3>
-            <p>Already own a villa, or farmhouse in Hyderabad? List it on Hydairbnb and we handle the visibility. Start earning today.</p>
+            <h3>Passive Income for Owners</h3>
+            <p>Earn 40% more than standard rent. List your property and let us handle the visibility and guests.</p>
         </div>
         <div class="benefit-card">
             <i class="fas fa-shield-alt"></i>
-            <h3>Verified, Safe & Transparent</h3>
-            <p>Every listing is manually verified. No hidden fees. No surprises. Just clear pricing and real guest reviews.</p>
+            <h3>Verified & Transparent</h3>
+            <p>Every listing is manually verified. No hidden fees. No surprises. Just real guest reviews.</p>
         </div>
     </div>
 </section>
@@ -186,51 +195,37 @@
     </div>
 </section>
 
+<section class="section" style="max-width: 900px;">
+    <div style="padding: 40px; background: #fffcf0; border-left: 6px solid var(--host-orange); border-radius: 10px;">
+        <h4 style="font-family: 'Playfair Display'; font-size: 26px; color: var(--host-orange); margin-bottom: 15px;">A Note from Your Host</h4>
+        <p style="font-style: italic; font-size: 18px; color: #444;">"We believe traveling should feel like coming home. At Hydairbnb, our mission is simple: provide honest, high-quality stays with zero hidden costs. Whether you are a guest looking for peace or an owner looking for growth, I am just a WhatsApp away to ensure you have the best experience in Hyderabad."</p>
+    </div>
+</section>
+
 <section class="section">
     <h2 class="section-title">Handpicked Stays in Hyderabad</h2>
-    <p style="text-align: center; margin-top: -40px; margin-bottom: 50px; color: #666;">Each property is personally reviewed by our team.</p>
     <div class="grid-3">
         <div class="prop-card">
-            <img src="flat.1jpg.jfif" alt="Luxury Suite">
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800" alt="Luxury Suite">
             <div class="prop-info">
                 <p style="font-size: 11px; font-weight: 800; color: var(--primary);">FINANCIAL DISTRICT | VILLA</p>
                 <h4 style="margin: 5px 0;">Executive Corporate Suite</h4>
                 <p style="font-size: 14px; margin-bottom: 15px;">Starting at ₹2,800/night</p>
-                <a href="connect-hydairbnb.html" class="btn-blue" style="padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 12px; font-weight: 700;">Book Now</a>
+                <a href="https://wa.me/919346573629" class="btn-blue" style="padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 12px; font-weight: 700;">Book Now</a>
             </div>
         </div>
         <div class="prop-card" style="display: flex; align-items: center; justify-content: center; text-align: center; background: #fffcf5; border: 2px dashed #ddd;">
             <div style="padding: 20px;">
                 <h4>New listings added every week</h4>
-                <a href="connect-hydairbnb.html" style="color: var(--primary); font-weight: 800; text-decoration: none; display: block; margin-top: 10px;">Join our waitlist for early access →</a>
+                <a href="https://wa.me/919346573629" style="color: var(--primary); font-weight: 800; text-decoration: none; display: block; margin-top: 10px;">Join our waitlist for early access →</a>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="section" style="background: var(--grey); max-width: 100%;">
-    <div style="max-width: 1400px; margin: auto;">
-        <h2 class="section-title">Explore Hyderabad Like a Local</h2>
-        <div class="grid-3">
-            <a href="blog.html" class="blog-card">
-                <h4>10 Best Weekend Getaways Near Hyderabad in 2025</h4>
-                <span style="color: var(--primary); font-weight: 700;">Read More →</span>
-            </a>
-            <a href="blog.html" class="blog-card">
-                <h4>Why More Hyderabadis Are Choosing Private Villas Over Hotels</h4>
-                <span style="color: var(--primary); font-weight: 700;">Read More →</span>
-            </a>
-            <a href="blog.html" class="blog-card">
-                <h4>How to Earn Passive Income From Your Hyderabad Property</h4>
-                <span style="color: var(--primary); font-weight: 700;">Read More →</span>
-            </a>
         </div>
     </div>
 </section>
 
 <div class="host-cta">
     <h2 style="font-family: 'Playfair Display'; font-size: 32px; margin-bottom: 15px;">Own a property in Hyderabad?</h2>
-    <p>Join hundreds of property owners who earn passive income with zero hassle.</p>
+    <p>Join hundreds of property owners who earn 40% more passive income with zero hassle.</p>
     <a href="how-it-works-property-owners.html" class="btn" style="background: white; color: var(--host-orange); margin-top: 30px;">List My Property →</a>
 </div>
 
@@ -240,7 +235,7 @@
             <h4>Company</h4>
             <a href="index.html">Home</a>
             <a href="about-us.html">About Us</a>
-            <a href="connect-hydairbnb.html">Contact Us</a>
+            <a href="https://wa.me/919346573629">Contact Us</a>
         </div>
         <div>
             <h4>Explore</h4>
@@ -252,7 +247,6 @@
             <h4>Legal</h4>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
-            <p style="font-size: 12px; color: #555; margin-top: 20px;">*All prices in INR</p>
         </div>
     </div>
     <div style="margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
